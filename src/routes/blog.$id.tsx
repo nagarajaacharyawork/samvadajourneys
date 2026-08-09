@@ -57,13 +57,13 @@ function BlogDetail() {
         <p className="mt-8 text-xl leading-relaxed text-foreground/90">{post.excerpt}</p>
         <div className="mt-8 space-y-6 text-base leading-[1.85] text-foreground/85">
           <p>
-            It is 5:47 AM. The nets have already been out for two hours. On the sand at Malpe, seven men crouch in a loose circle, sorting the night's catch — silver mackerel from the smaller sardines, sardines from the crab that keeps trying to shuffle away. Nobody speaks. The morning does the talking.
+            It is 5:47 AM. The nets have already been out for two hours. On the sand at Malpe, seven men crouch in a loose circle, sorting the night's catch, silver mackerel from the smaller sardines, sardines from the crab that keeps trying to shuffle away. Nobody speaks. The morning does the talking.
           </p>
           <p>
             This is the part of coastal Karnataka the tour buses skip. The photos happen at 9 AM, when the beach turns into an Instagram set. What happens at 5 AM is the reason the beach exists at all.
           </p>
           <p>
-            We spent three days in a small fishing village north of Udupi with our friend Ramesh — third generation on the water, second generation to run his own boat. Over filter kaapi in his mother's kitchen, he explained a version of the coastal economy that no travel guide will ever hand you. Boat share, ice cost, kerosene, the daily gamble of the auction shed. The math is brutal. The stories are not.
+            We spent three days in a small fishing village north of Udupi with our friend Ramesh, third generation on the water, second generation to run his own boat. Over filter kaapi in his mother's kitchen, he explained a version of the coastal economy that no travel guide will ever hand you. Boat share, ice cost, kerosene, the daily gamble of the auction shed. The math is brutal. The stories are not.
           </p>
           <p>
             This is why we travel. Not to see a place. To sit inside it, until it starts to make sense.

@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -8,22 +8,22 @@ const nav = [
     label: "Explore",
     to: "/",
     submenu: [
-      { label: "Coastal Karnataka", to: "/experiences" },
-      { label: "Western Ghats", to: "/experiences" },
-      { label: "Heritage Trails", to: "/experiences" },
-      { label: "Hidden Villages", to: "/experiences" },
+      { label: "Coastal Karnataka", to: "/explore/coastal-karnataka" },
+      { label: "Western Ghats", to: "/explore/western-ghats" },
+      { label: "Heritage Trails", to: "/explore/heritage-trails" },
+      { label: "Hidden Villages", to: "/explore/hidden-villages" },
     ],
   },
   {
     label: "Experience",
     to: "/experiences",
     submenu: [
-      { label: "Food Trails", to: "/experiences" },
-      { label: "Heritage Walks", to: "/experiences" },
-      { label: "Waterfall Treks", to: "/experiences" },
-      { label: "Coffee Estates", to: "/experiences" },
-      { label: "Sunrise & Sunset", to: "/experiences" },
-      { label: "Corporate Retreats", to: "/experiences" },
+      { label: "Food Trails", to: "/experiences#food-trails" },
+      { label: "Heritage Walks", to: "/experiences#heritage-walks" },
+      { label: "Waterfall Treks", to: "/experiences#waterfall-treks" },
+      { label: "Coffee Estates", to: "/experiences#coffee-estates" },
+      { label: "Sunrise & Sunset", to: "/experiences#sunrise-sunset" },
+      { label: "Corporate Retreats", to: "/experiences#corporate-retreats" },
     ],
   },
   { label: "Plan", to: "/trips" },
@@ -36,6 +36,8 @@ export function Header() {
   const [open, setOpen] = useState<string | null>(null);
   const [mobile, setMobile] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { pathname } = useLocation();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -44,8 +46,8 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const headerBg = scrolled
-    ? "backdrop-blur-md bg-[#0B192C]/85 border-b border-white/10"
+  const headerBg = !isHome || scrolled
+    ? "backdrop-blur-md bg-[#0B192C]/95 border-b border-white/10"
     : "bg-transparent border-b border-transparent";
 
   return (

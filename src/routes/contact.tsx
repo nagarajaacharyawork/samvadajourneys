@@ -28,7 +28,7 @@ function ContactPage() {
               Say Hello
             </div>
             <h1 className="mt-5 text-balance text-5xl font-black leading-[1.05] md:text-6xl">Let's plan a journey worth remembering.</h1>
-            <p className="mt-5 text-lg text-muted-foreground">A real human — usually within 12 hours — will read your message and reply personally.</p>
+            <p className="mt-5 text-lg text-muted-foreground">A real human, usually within 12 hours, will read your message and reply personally.</p>
           </motion.div>
         </div>
       </section>

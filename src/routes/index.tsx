@@ -26,7 +26,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "India's first entrepreneur-led experiential travel company. Meet local communities, taste authentic food, and discover hidden India.",
+          "Curated coastal, heritage, food and estate journeys across Karnataka with the people who actually live there",
       },
     ],
   }),
@@ -34,11 +34,11 @@ export const Route = createFileRoute("/")({
 });
 
 const promises = [
-  { n: "01", icon: Quote, title: "One Local Story", body: "Told by the person who lived it — never a script." },
+  { n: "01", icon: Quote, title: "One Local Story", body: "Told by the person who lived it, never a script." },
   { n: "02", icon: MapPin, title: "One Hidden Place", body: "Off the map. Off the tourist trail. On the local trail." },
-  { n: "03", icon: Utensils, title: "One Authentic Meal", body: "Home kitchens, 70-year-old eateries, banana-leaf lunches." },
+  { n: "03", icon: Utensils, title: "One Authentic Meal", body: "Home kitchens, decades old eateries, banana leaf lunches." },
   { n: "04", icon: HeartHandshake, title: "One Local Entrepreneur", body: "Coffee with the people quietly building their worlds." },
-  { n: "05", icon: Sparkles, title: "One Lifetime Memory", body: "The kind you'll still be telling in twenty years." },
+  { n: "05", icon: Sparkles, title: "One Lifetime Memory", body: "The kind you will still be telling in twenty years." },
 ];
 
 function Home() {
@@ -138,7 +138,7 @@ function PromiseSection() {
         <EyebrowHeading
           eyebrow="The Samvada Promise"
           title={<>Five non-negotiables on <em className="italic font-light">every journey.</em></>}
-          subtitle="Every experience we craft carries these five essentials — no exceptions, no shortcuts."
+          subtitle="Every experience we craft carries these five essentials. No exceptions. No shortcuts."
         />
 
         <div className="mt-16 grid gap-px overflow-hidden bg-[#0B192C]/10 md:grid-cols-5">
@@ -170,7 +170,7 @@ function ExperiencesGrid() {
         <EyebrowHeading
           eyebrow="Our Experiences"
           title={<>Seven doorways into <em className="italic font-light">hidden India.</em></>}
-          subtitle="Coast, culture, food, forest and coffee — each journey curated with the locals who live it."
+          subtitle="Coast, culture, food, forest and coffee. Each journey curated with the locals who live it."
           invert
         />
 
@@ -256,8 +256,8 @@ function OverlayCard({
 
 const differences = [
   ["Tourist Traps", "Local Moments"],
-  ["Krishna Temple photo-stop", "Breakfast at a hidden 70-year-old eatery run by three generations"],
-  ["Malpe Beach group tour", "Sunrise with the fishermen — real coastal economics"],
+  ["Krishna Temple photo stop", "Breakfast at a hidden 70 year old eatery run by three generations"],
+  ["Malpe Beach group tour", "Sunrise with the fishermen, real coastal economics"],
   ["St. Mary's Island selfies", "Backstage with a Yakshagana troupe hearing myths behind the masks"],
   ["Kaup Lighthouse checkbox", "Slow chai with a Bhoota Kola storyteller at dusk"],
   ["Standard filter coffee stop", "Founders quietly building coastal Karnataka's small economy"],
@@ -270,7 +270,7 @@ function DifferentlySection() {
         <EyebrowHeading
           eyebrow="Experience Travel Differently"
           title={<>Instead of sightseeing, <em className="italic font-light">you meet the place.</em></>}
-          subtitle="Here's how a typical Udupi itinerary shifts when you travel with Samvada."
+          subtitle="Here is how a typical Udupi itinerary shifts when you travel with Samvada."
         />
 
         <div className="mx-auto mt-14 grid max-w-5xl overflow-hidden md:grid-cols-2">
@@ -398,7 +398,7 @@ function SocialGrid() {
           <EyebrowHeading
             eyebrow="Follow The Journey"
             title={<>Real moments from <em className="italic font-light">real travelers.</em></>}
-            subtitle="Fresh from Instagram — no filters, no staging. Just India, as it happens."
+            subtitle="Fresh from Instagram. No filters, no staging. Just India, as it happens."
             invert
           />
         </div>
@@ -434,7 +434,7 @@ function BlogsSection() {
           <div>
             <div className="mb-4 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.45em] text-[#0B192C]/60">
               <span className="h-px w-8 bg-[#0B192C]/30" />
-              Journal & Stories
+              Journal and Stories
             </div>
             <h2 className="max-w-2xl text-balance text-4xl leading-[1.1] tracking-tight text-[#0B192C] md:text-5xl" style={{ fontFamily: "Fraunces, serif" }}>
               Field notes from <em className="italic font-light">the road.</em>

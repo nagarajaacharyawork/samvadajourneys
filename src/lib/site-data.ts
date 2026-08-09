@@ -14,10 +14,10 @@ export const experiences = [
   {
     slug: "coastal-explorer",
     title: "Coastal Explorer",
-    tagline: "Hidden beaches, islands & fishing villages",
+    tagline: "Hidden beaches, islands and fishing villages",
     image: expCoastal,
     duration: "2 Days",
-    group: "6 – 12",
+    group: "6 to 12",
     highlights: [
       "Sunrise with local fishermen at Malpe",
       "Boat ride to St. Mary's Island",
@@ -27,10 +27,10 @@ export const experiences = [
   {
     slug: "heritage-walks",
     title: "Heritage Walks",
-    tagline: "Temples, traditions & local history",
+    tagline: "Temples, traditions and local history",
     image: expHeritage,
     duration: "Half Day",
-    group: "4 – 15",
+    group: "4 to 15",
     highlights: [
       "Krishna Matha's untold stories",
       "Meet a temple priest family",
@@ -43,33 +43,33 @@ export const experiences = [
     tagline: "Authentic cuisine with the people who make it",
     image: expFood,
     duration: "1 Day",
-    group: "4 – 10",
+    group: "4 to 10",
     highlights: [
-      "Breakfast at a 70-year-old eatery",
+      "Breakfast at a decades old eatery",
       "Learn to roll a proper Neer Dosa",
-      "Coastal home-lunch on banana leaf",
+      "Coastal home lunch on banana leaf",
     ],
   },
   {
     slug: "waterfall-treks",
     title: "Hidden Waterfall Treks",
-    tagline: "Adventure through nature's best-kept secrets",
+    tagline: "Adventure through nature's best kept secrets",
     image: expWaterfall,
     duration: "1 Day",
-    group: "6 – 12",
+    group: "6 to 12",
     highlights: [
-      "Off-map Western Ghats trail",
+      "Off map Western Ghats trail",
       "Wild swim under a waterfall",
       "Village lunch after the trek",
     ],
   },
   {
     slug: "sunrise-sunset",
-    title: "Sunrise & Sunset Experiences",
+    title: "Sunrise and Sunset Experiences",
     tagline: "Magical moments beyond tourist crowds",
     image: expSunrise,
     duration: "Few Hours",
-    group: "2 – 20",
+    group: "2 to 20",
     highlights: [
       "Golden hour at Kaup Lighthouse",
       "Silent beach yoga session",
@@ -79,25 +79,25 @@ export const experiences = [
   {
     slug: "coffee-estate",
     title: "Coffee Estate Experiences",
-    tagline: "Plantation life & local coffee culture",
+    tagline: "Plantation life and local coffee culture",
     image: expCoffee,
-    duration: "2 – 3 Days",
-    group: "4 – 14",
+    duration: "2 to 3 Days",
+    group: "4 to 14",
     highlights: [
       "Stay on a working estate",
-      "Bean-to-cup with the grower",
+      "Bean to cup with the grower",
       "Sunrise walk through the plantation",
     ],
   },
   {
     slug: "corporate-retreats",
-    title: "Corporate & Startup Retreats",
-    tagline: "Team-building with meaning",
+    title: "Corporate and Startup Retreats",
+    tagline: "Team building with meaning",
     image: expCorporate,
     duration: "Custom",
-    group: "10 – 60",
+    group: "10 to 60",
     highlights: [
-      "Founder-led fireside sessions",
+      "Founder led fireside sessions",
       "Outdoor collaboration missions",
       "Curated dinners with local artists",
     ],
@@ -109,7 +109,7 @@ export const trips = [
     id: "malpe-weekend",
     title: "Malpe Coastal Weekender",
     category: "Weekend Explorer",
-    date: "12 – 13 Oct 2026",
+    date: "12 and 13 Oct 2026",
     from: "Bengaluru",
     price: "₹8,900",
     spots: 4,
@@ -147,7 +147,7 @@ export const trips = [
   },
   {
     id: "kaup-sunrise",
-    title: "Kaup Sunrise & Lighthouse Morning",
+    title: "Kaup Sunrise and Lighthouse Morning",
     category: "Sunrise",
     date: "23 Nov 2026",
     from: "Udupi",
@@ -159,7 +159,7 @@ export const trips = [
     id: "chikmagalur-estate",
     title: "Chikmagalur Estate Escape",
     category: "Coffee Estates",
-    date: "6 – 8 Dec 2026",
+    date: "6 to 8 Dec 2026",
     from: "Bengaluru",
     price: "₹14,500",
     spots: 5,
@@ -191,9 +191,9 @@ export const gallery = [
 export const posts = [
   {
     id: "70-year-eatery",
-    title: "Behind the Scenes with Udupi's 70-Year-Old Eatery Founders",
+    title: "Behind the Scenes with Udupi's 70 Year Old Eatery Founders",
     excerpt:
-      "Long before Udupi hotels became a national obsession, one family kept a tiny wood-fired kitchen alive. We spent a morning at their stove.",
+      "Long before Udupi hotels became a national obsession, one family kept a tiny wood fired kitchen alive. We spent a morning at their stove.",
     category: "Local Stories",
     date: "Oct 4, 2026",
     image: blogEatery,
@@ -203,7 +203,7 @@ export const posts = [
     id: "coastal-fishing-economics",
     title: "The Unspoken Economics of Coastal Fishing Villages",
     excerpt:
-      "Between the trawler and the fish market lies an entire economy nobody writes about. Here's what a sunrise on Malpe beach taught us.",
+      "Between the trawler and the fish market lies an entire economy nobody writes about. Here is what a sunrise on Malpe beach taught us.",
     category: "Culture",
     date: "Sep 22, 2026",
     image: expCoastal,
@@ -213,7 +213,7 @@ export const posts = [
     id: "yakshagana-nights",
     title: "Yakshagana Nights: Meeting the Artists Behind the Masks",
     excerpt:
-      "The performance ends at 4 AM. The stories, however, keep going. A quiet conversation with a third-generation Yakshagana troupe.",
+      "The performance ends at 4 AM. The stories, however, keep going. A quiet conversation with a third generation Yakshagana troupe.",
     category: "Culture",
     date: "Sep 9, 2026",
     image: galleryCulture,
@@ -223,7 +223,7 @@ export const posts = [
     id: "chikmagalur-coffee",
     title: "A Chikmagalur Morning: From Bean to Filter Kaapi",
     excerpt:
-      "What actually happens between the plant and your cup — told by the growers who've been doing it for four generations.",
+      "What actually happens between the plant and your cup, told by the growers who have been doing it for four generations.",
     category: "Food & Heritage",
     date: "Aug 30, 2026",
     image: expCoffee,
@@ -257,20 +257,20 @@ export const testimonials = [
     role: "Solo Traveler, Mumbai",
     rating: 5,
     quote:
-      "Samvada took me to places Google Maps doesn't even know exist. The 4 AM boat with the fishermen is a memory I'll keep forever.",
+      "Samvada took me to places Google Maps does not even know exist. The 4 AM boat with the fishermen is a memory I will keep forever.",
   },
   {
-    name: "Rahul & Meera",
+    name: "Rahul and Meera",
     role: "Couple, Bengaluru",
     rating: 5,
     quote:
-      "We've been to Udupi three times as 'tourists'. This was the first time we actually met the town. Beautifully curated.",
+      "We have been to Udupi three times as tourists. This was the first time we actually met the town. Beautifully curated.",
   },
   {
     name: "Karan Rao",
     role: "Startup Founder, Pune",
     rating: 5,
     quote:
-      "Ran our team offsite with them. The 'meet a local entrepreneur' session hit harder than any workshop we've paid for.",
+      "Ran our team offsite with them. The meet a local entrepreneur session hit harder than any workshop we have paid for.",
   },
 ];

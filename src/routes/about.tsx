@@ -10,7 +10,7 @@ export const Route = createFileRoute("/about")({
     meta: [
       { title: "About & Partner With Us — Samvada Journeys" },
       { name: "description", content: "The story behind Samvada Journeys and how homestays, cafés, and local operators can partner with us." },
-      { property: "og:title", content: "About & Partner With Us — Samvada Journeys" },
+      { property: "og:title", content: "About and Partner With Us — Samvada Journeys" },
       { property: "og:description", content: "Community-driven, entrepreneur-led experiential travel across India." },
     ],
   }),
@@ -19,7 +19,7 @@ export const Route = createFileRoute("/about")({
 
 const whyUs = [
   { icon: Compass, title: "Curated Experiences", body: "Every journey handcrafted, not templated." },
-  { icon: Users, title: "Local Experts", body: "Hosts who were born here — not hired to sound like it." },
+  { icon: Users, title: "Local Experts", body: "Hosts who were born here, not hired to sound like it." },
   { icon: Shield, title: "Safe & Well-Planned", body: "Vetted stays, licensed transport, 24/7 on-ground support." },
   { icon: Sparkles, title: "Authentic Culture", body: "Real Tulu, real Yakshagana, real filter kaapi." },
   { icon: HeartHandshake, title: "Community-Driven", body: "Fair pay to every host. No exploitation. Ever." },
@@ -37,12 +37,12 @@ function AboutPage() {
       <section className="pt-32 pb-16" style={{ background: "var(--brand-sand)" }}>
         <div className="mx-auto grid max-w-7xl gap-14 px-6 md:grid-cols-2 md:px-8">
           <SectionHeading eyebrow="Our Story" title={<>We started Samvada to fix the way India is travelled.</>}>
-            We were tired of ticking boxes. Tired of watching the real India — the one where filter kaapi is made by hand and stories are told at 4 AM — get flattened into another tour bus stop. So we built something different: entrepreneur-led, community-first, uncompromisingly local.
+            We were tired of ticking boxes. Tired of watching the real India, the one where filter kaapi is made by hand and stories are told at 4 AM, get flattened into another tour bus stop. So we built something different: entrepreneur-led, community-first, uncompromisingly local.
           </SectionHeading>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-3xl border border-foreground/10 bg-card p-8">
             <div className="text-[11px] font-semibold uppercase tracking-[0.28em] text-muted-foreground">Mission</div>
             <p className="mt-4 text-xl font-medium leading-relaxed">
-              To connect every curious traveler with the person, place, and story behind the postcard — and to make sure the local benefits more than the outsider.
+              To connect every curious traveler with the person, place, and story behind the postcard, and to make sure the local benefits more than the outsider.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-4 border-t border-foreground/10 pt-6">
               {[["120+", "Local Hosts"], ["18", "Districts"], ["100%", "Fair Pay"]].map(([n, l]) => (
@@ -80,9 +80,9 @@ function AboutPage() {
               <span className="h-1.5 w-1.5 rounded-full" style={{ background: "var(--brand-terracotta)" }} />
               Partner With Us
             </div>
-            <h2 className="mt-5 text-balance text-4xl font-black leading-[1.05] md:text-5xl">Let's build the new way to travel India — together.</h2>
+            <h2 className="mt-5 text-balance text-4xl font-black leading-[1.05] md:text-5xl">Let's build the new way to travel India, together.</h2>
             <p className="mt-5 text-base leading-relaxed opacity-85">
-              Whether you run a homestay in Coorg, a fisherman's café in Malpe, or a cultural troupe in coastal Karnataka — we'd love to work with you.
+              Whether you run a homestay in Coorg, a fisherman's café in Malpe, or a cultural troupe in coastal Karnataka, we'd love to work with you.
             </p>
             <div className="mt-8 flex flex-wrap gap-2">
               {partnerTypes.map((p) => (

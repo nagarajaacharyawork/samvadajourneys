@@ -14,8 +14,13 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ExperiencesRouteImport } from './routes/experiences'
+import { Route as ExploreRouteImport } from './routes/explore'
 import { Route as TripsRouteImport } from './routes/trips'
 import { Route as BlogIdRouteImport } from './routes/blog.$id'
+import { Route as ExploreCoastalKarnatakaRouteImport } from './routes/explore.coastal-karnataka'
+import { Route as ExploreHeritageTrailsRouteImport } from './routes/explore.heritage-trails'
+import { Route as ExploreHiddenVillagesRouteImport } from './routes/explore.hidden-villages'
+import { Route as ExploreWesternGhatsRouteImport } from './routes/explore.western-ghats'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -42,6 +47,11 @@ const ExperiencesRoute = ExperiencesRouteImport.update({
   path: '/experiences',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ExploreRoute = ExploreRouteImport.update({
+  id: '/explore',
+  path: '/explore',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TripsRoute = TripsRouteImport.update({
   id: '/trips',
   path: '/trips',
@@ -52,6 +62,26 @@ const BlogIdRoute = BlogIdRouteImport.update({
   path: '/$id',
   getParentRoute: () => BlogRoute,
 } as any)
+const ExploreCoastalKarnatakaRoute = ExploreCoastalKarnatakaRouteImport.update({
+  id: '/coastal-karnataka',
+  path: '/coastal-karnataka',
+  getParentRoute: () => ExploreRoute,
+} as any)
+const ExploreHeritageTrailsRoute = ExploreHeritageTrailsRouteImport.update({
+  id: '/heritage-trails',
+  path: '/heritage-trails',
+  getParentRoute: () => ExploreRoute,
+} as any)
+const ExploreHiddenVillagesRoute = ExploreHiddenVillagesRouteImport.update({
+  id: '/hidden-villages',
+  path: '/hidden-villages',
+  getParentRoute: () => ExploreRoute,
+} as any)
+const ExploreWesternGhatsRoute = ExploreWesternGhatsRouteImport.update({
+  id: '/western-ghats',
+  path: '/western-ghats',
+  getParentRoute: () => ExploreRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -59,8 +89,13 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/experiences': typeof ExperiencesRoute
+  '/explore': typeof ExploreRouteWithChildren
   '/trips': typeof TripsRoute
   '/blog/$id': typeof BlogIdRoute
+  '/explore/coastal-karnataka': typeof ExploreCoastalKarnatakaRoute
+  '/explore/heritage-trails': typeof ExploreHeritageTrailsRoute
+  '/explore/hidden-villages': typeof ExploreHiddenVillagesRoute
+  '/explore/western-ghats': typeof ExploreWesternGhatsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -68,8 +103,13 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/experiences': typeof ExperiencesRoute
+  '/explore': typeof ExploreRouteWithChildren
   '/trips': typeof TripsRoute
   '/blog/$id': typeof BlogIdRoute
+  '/explore/coastal-karnataka': typeof ExploreCoastalKarnatakaRoute
+  '/explore/heritage-trails': typeof ExploreHeritageTrailsRoute
+  '/explore/hidden-villages': typeof ExploreHiddenVillagesRoute
+  '/explore/western-ghats': typeof ExploreWesternGhatsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -78,8 +118,13 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/experiences': typeof ExperiencesRoute
+  '/explore': typeof ExploreRouteWithChildren
   '/trips': typeof TripsRoute
   '/blog/$id': typeof BlogIdRoute
+  '/explore/coastal-karnataka': typeof ExploreCoastalKarnatakaRoute
+  '/explore/heritage-trails': typeof ExploreHeritageTrailsRoute
+  '/explore/hidden-villages': typeof ExploreHiddenVillagesRoute
+  '/explore/western-ghats': typeof ExploreWesternGhatsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -89,8 +134,13 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/experiences'
+    | '/explore'
     | '/trips'
     | '/blog/$id'
+    | '/explore/coastal-karnataka'
+    | '/explore/heritage-trails'
+    | '/explore/hidden-villages'
+    | '/explore/western-ghats'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -98,8 +148,13 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/experiences'
+    | '/explore'
     | '/trips'
     | '/blog/$id'
+    | '/explore/coastal-karnataka'
+    | '/explore/heritage-trails'
+    | '/explore/hidden-villages'
+    | '/explore/western-ghats'
   id:
     | '__root__'
     | '/'
@@ -107,8 +162,13 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/experiences'
+    | '/explore'
     | '/trips'
     | '/blog/$id'
+    | '/explore/coastal-karnataka'
+    | '/explore/heritage-trails'
+    | '/explore/hidden-villages'
+    | '/explore/western-ghats'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -117,6 +177,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   ExperiencesRoute: typeof ExperiencesRoute
+  ExploreRoute: typeof ExploreRouteWithChildren
   TripsRoute: typeof TripsRoute
 }
 
@@ -157,6 +218,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ExperiencesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/explore': {
+      id: '/explore'
+      path: '/explore'
+      fullPath: '/explore'
+      preLoaderRoute: typeof ExploreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/trips': {
       id: '/trips'
       path: '/trips'
@@ -171,6 +239,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIdRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/explore/coastal-karnataka': {
+      id: '/explore/coastal-karnataka'
+      path: '/coastal-karnataka'
+      fullPath: '/explore/coastal-karnataka'
+      preLoaderRoute: typeof ExploreCoastalKarnatakaRouteImport
+      parentRoute: typeof ExploreRoute
+    }
+    '/explore/heritage-trails': {
+      id: '/explore/heritage-trails'
+      path: '/heritage-trails'
+      fullPath: '/explore/heritage-trails'
+      preLoaderRoute: typeof ExploreHeritageTrailsRouteImport
+      parentRoute: typeof ExploreRoute
+    }
+    '/explore/hidden-villages': {
+      id: '/explore/hidden-villages'
+      path: '/hidden-villages'
+      fullPath: '/explore/hidden-villages'
+      preLoaderRoute: typeof ExploreHiddenVillagesRouteImport
+      parentRoute: typeof ExploreRoute
+    }
+    '/explore/western-ghats': {
+      id: '/explore/western-ghats'
+      path: '/western-ghats'
+      fullPath: '/explore/western-ghats'
+      preLoaderRoute: typeof ExploreWesternGhatsRouteImport
+      parentRoute: typeof ExploreRoute
+    }
   }
 }
 
@@ -184,12 +280,30 @@ const BlogRouteChildren: BlogRouteChildren = {
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
+interface ExploreRouteChildren {
+  ExploreCoastalKarnatakaRoute: typeof ExploreCoastalKarnatakaRoute
+  ExploreHeritageTrailsRoute: typeof ExploreHeritageTrailsRoute
+  ExploreHiddenVillagesRoute: typeof ExploreHiddenVillagesRoute
+  ExploreWesternGhatsRoute: typeof ExploreWesternGhatsRoute
+}
+
+const ExploreRouteChildren: ExploreRouteChildren = {
+  ExploreCoastalKarnatakaRoute: ExploreCoastalKarnatakaRoute,
+  ExploreHeritageTrailsRoute: ExploreHeritageTrailsRoute,
+  ExploreHiddenVillagesRoute: ExploreHiddenVillagesRoute,
+  ExploreWesternGhatsRoute: ExploreWesternGhatsRoute,
+}
+
+const ExploreRouteWithChildren =
+  ExploreRoute._addFileChildren(ExploreRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
   ExperiencesRoute: ExperiencesRoute,
+  ExploreRoute: ExploreRouteWithChildren,
   TripsRoute: TripsRoute,
 }
 export const routeTree = rootRouteImport

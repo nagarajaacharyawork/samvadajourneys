@@ -139,7 +139,7 @@ function ReserveModal({ trip, onClose, onSubmit }: { trip: (typeof trips)[number
       >
         <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">Reserve Seat</div>
         <div className="mt-1 text-xl font-black">{trip.title}</div>
-        <div className="mt-1 text-xs text-muted-foreground">{trip.date} · from {trip.from}</div>
+        <div className="mt-1 text-xs text-muted-foreground">{trip.date} {trip.from}</div>
         <div className="mt-5 grid gap-3">
           <input required placeholder="Your name" className="rounded-xl border border-foreground/10 bg-foreground/5 px-4 py-3 text-sm outline-none focus:border-foreground/30" />
           <input required type="tel" placeholder="Phone number" className="rounded-xl border border-foreground/10 bg-foreground/5 px-4 py-3 text-sm outline-none focus:border-foreground/30" />

@@ -30,7 +30,7 @@ function BlogIndex() {
       <section className="pt-32 pb-8" style={{ background: "var(--brand-sand)" }}>
         <div className="mx-auto max-w-7xl px-6 md:px-8">
           <SectionHeading eyebrow="Blog & Stories" title={<>Field notes from a slower India.</>}>
-            Told by the people who live it — not by us.
+            Told by the people who live it, not by us.
           </SectionHeading>
         </div>
       </section>
@@ -43,11 +43,11 @@ function BlogIndex() {
             </div>
             <div className="flex flex-col justify-center p-8 md:p-12">
               <span className="inline-flex w-fit rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-white" style={{ background: "var(--brand-terracotta)" }}>
-                Featured · {featured.category}
+                Featured {featured.category}
               </span>
               <h3 className="mt-5 text-3xl font-black leading-tight md:text-4xl">{featured.title}</h3>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">{featured.excerpt}</p>
-              <div className="mt-6 text-xs text-muted-foreground">{featured.date} · {featured.readTime}</div>
+              <div className="mt-6 text-xs text-muted-foreground">{featured.date} {featured.readTime}</div>
               <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold" style={{ color: "var(--brand-terracotta)" }}>
                 Read the story <ArrowRight className="h-4 w-4" />
               </span>
@@ -76,7 +76,7 @@ function BlogIndex() {
                     <img src={p.image} alt={p.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   </div>
                   <div className="p-5">
-                    <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">{p.category} · {p.readTime}</div>
+                    <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">{p.category} {p.readTime}</div>
                     <div className="mt-2 text-lg font-bold leading-snug">{p.title}</div>
                     <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{p.excerpt}</p>
                   </div>
