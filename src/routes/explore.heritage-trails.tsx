@@ -15,7 +15,12 @@ export const Route = createFileRoute("/explore/heritage-trails")({
     meta: [
       { title: "Heritage Trails — Samvada Journeys" },
       { name: "description", content: "Walk through Karnataka's living heritage. Ancient temples, Jain monuments, sacred towns, and the stories that have shaped this land for centuries." },
+      { property: "og:title", content: "Heritage Trails — Samvada Journeys" },
+      { property: "og:description", content: "Walk through Karnataka's living heritage. Ancient temples, Jain monuments, sacred towns, and the stories that have shaped this land for centuries." },
+      { property: "og:url", content: "https://www.samvadajourneys.in/explore/heritage-trails" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://www.samvadajourneys.in/explore/heritage-trails" }],
   }),
   component: HeritageTrails,
 });
@@ -91,7 +96,7 @@ const data: DestinationData = {
   faqs: [
     { q: "Do I need to be religious to enjoy the heritage trails?", a: "Not at all. The temples and sacred sites of this region are extraordinary as architecture, as history, and as living community spaces. You don't need to share the faith to appreciate the culture." },
     { q: "Can I attend a Yakshagana performance?", a: "Yes. The Yakshagana season runs from November to May. We arrange front seats and a backstage meeting with the artists after the performance." },
-    { q: "What is the Paryaya festival?", a: "The Paryaya is a biennial ceremony at the Udupi Krishna Matha in which the administration of the temple passes from one monastery to another. It is one of the most important religious events in Karnataka. The next Paryaya is in January 2026." },
+    { q: "What is the Paryaya festival?", a: "The Paryaya is a biennial ceremony at the Udupi Krishna Matha in which the administration of the temple passes from one monastery to another. It is one of the most important religious events in Karnataka. The next Paryaya is in January 2028." },
     { q: "Are the artisan workshops open to visitors?", a: "Most are, with prior arrangement. We have relationships with several master craftspeople in Moodabidri who are happy to welcome visitors and explain their work." },
     { q: "What is Bhoota Kola?", a: "Bhoota Kola is a spirit-propitiation ritual practised in village shrines across the Tulu coast. A performer channels a local spirit and delivers blessings and verdicts to the community. Visitors are sometimes welcome to observe from a respectful distance." },
   ],

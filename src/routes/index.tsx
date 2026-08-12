@@ -26,9 +26,15 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Curated coastal, heritage, food and estate journeys across Karnataka with the people who actually live there",
+          "India's first entrepreneur-led experiential travel company. Curated coastal, heritage, food and estate journeys across Karnataka with the people who actually live there.",
       },
+      { property: "og:title", content: "Samvada Journeys — Explore India Like a Local" },
+      { property: "og:description", content: "Curated coastal, heritage, food and estate journeys across Karnataka with the people who actually live there." },
+      { property: "og:url", content: "https://www.samvadajourneys.in/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://www.samvadajourneys.in/" }],
   }),
   component: Home,
 });

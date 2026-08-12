@@ -15,7 +15,12 @@ export const Route = createFileRoute("/experiences")({
     meta: [
       { title: "Experiences — Samvada Journeys" },
       { name: "description", content: "Six ways to experience coastal Karnataka. Food trails, heritage walks, waterfall treks, coffee estates, sunrise moments, and corporate retreats." },
+      { property: "og:title", content: "Experiences — Samvada Journeys" },
+      { property: "og:description", content: "Food trails, heritage walks, waterfall treks, coffee estates, sunrise moments and corporate retreats across coastal Karnataka." },
+      { property: "og:url", content: "https://www.samvadajourneys.in/experiences" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://www.samvadajourneys.in/experiences" }],
   }),
   component: ExperiencesPage,
 });

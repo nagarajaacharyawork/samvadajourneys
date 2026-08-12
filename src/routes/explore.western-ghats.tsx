@@ -16,7 +16,12 @@ export const Route = createFileRoute("/explore/western-ghats")({
     meta: [
       { title: "Western Ghats — Samvada Journeys" },
       { name: "description", content: "Trek through ancient forests, discover hidden waterfalls, and walk the coffee plantations of the Western Ghats with Samvada Journeys." },
+      { property: "og:title", content: "Western Ghats — Samvada Journeys" },
+      { property: "og:description", content: "Trek through ancient forests, discover hidden waterfalls, and walk the coffee plantations of the Western Ghats." },
+      { property: "og:url", content: "https://www.samvadajourneys.in/explore/western-ghats" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://www.samvadajourneys.in/explore/western-ghats" }],
   }),
   component: WesternGhats,
 });

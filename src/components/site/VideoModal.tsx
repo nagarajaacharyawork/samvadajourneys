@@ -33,10 +33,11 @@ export function VideoModal({ open, onClose }: { open: boolean; onClose: () => vo
             >
               <X className="h-5 w-5" />
             </button>
+            {/* TODO: Replace VIDEO_ID with the real YouTube video ID before launch */}
             <div className="aspect-video">
               <iframe
                 className="h-full w-full"
-                src="https://www.youtube.com/embed/aBcXyz1234?autoplay=1&rel=0"
+                src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&rel=0"
                 title="Samvada Journeys — Experience India Like a Local"
                 allow="autoplay; encrypted-media; picture-in-picture"
                 allowFullScreen

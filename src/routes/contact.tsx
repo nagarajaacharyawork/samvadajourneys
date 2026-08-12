@@ -11,7 +11,10 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Plan your journey with us. Call, WhatsApp, or send an enquiry — a Samvada host will get back within 12 hours." },
       { property: "og:title", content: "Contact — Samvada Journeys" },
       { property: "og:description", content: "Reach the Samvada Journeys team — call, WhatsApp, or send an enquiry." },
+      { property: "og:url", content: "https://www.samvadajourneys.in/contact" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://www.samvadajourneys.in/contact" }],
   }),
   component: ContactPage,
 });
@@ -41,7 +44,7 @@ function ContactPage() {
               { icon: MessageCircle, title: "WhatsApp", value: "Chat with a host", href: "https://wa.me/919845012345" },
               { icon: Mail, title: "Email", value: "hello@samvadajourneys.in", href: "mailto:hello@samvadajourneys.in" },
               { icon: MapPin, title: "Office", value: "Diana Circle, Udupi, Karnataka 576101" },
-              { icon: Instagram, title: "Instagram", value: "@samvadajourneys", href: "https://instagram.com" },
+              { icon: Instagram, title: "Instagram", value: "@samvadajourneys", href: "https://www.instagram.com/samvadajourneys" },
             ].map((c) => {
               const inner = (
                 <div className="flex items-start gap-4 rounded-3xl border border-foreground/10 bg-card p-6 transition-colors hover:border-foreground/25">

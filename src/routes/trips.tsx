@@ -13,7 +13,10 @@ export const Route = createFileRoute("/trips")({
       { name: "description", content: "Reserve your seat on our next curated small-group journeys across coastal Karnataka and the Western Ghats." },
       { property: "og:title", content: "Upcoming Trips — Samvada Journeys" },
       { property: "og:description", content: "Weekenders, food trails, waterfall treks, coffee estate stays, festival specials." },
+      { property: "og:url", content: "https://www.samvadajourneys.in/trips" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://www.samvadajourneys.in/trips" }],
   }),
   component: TripsPage,
 });

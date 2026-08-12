@@ -13,8 +13,10 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CustomTripsRouteImport } from './routes/custom-trips'
 import { Route as ExperiencesRouteImport } from './routes/experiences'
 import { Route as ExploreRouteImport } from './routes/explore'
+import { Route as TravelSafetyRouteImport } from './routes/travel-safety'
 import { Route as TripsRouteImport } from './routes/trips'
 import { Route as BlogIdRouteImport } from './routes/blog.$id'
 import { Route as ExploreCoastalKarnatakaRouteImport } from './routes/explore.coastal-karnataka'
@@ -42,6 +44,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CustomTripsRoute = CustomTripsRouteImport.update({
+  id: '/custom-trips',
+  path: '/custom-trips',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ExperiencesRoute = ExperiencesRouteImport.update({
   id: '/experiences',
   path: '/experiences',
@@ -50,6 +57,11 @@ const ExperiencesRoute = ExperiencesRouteImport.update({
 const ExploreRoute = ExploreRouteImport.update({
   id: '/explore',
   path: '/explore',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TravelSafetyRoute = TravelSafetyRouteImport.update({
+  id: '/travel-safety',
+  path: '/travel-safety',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TripsRoute = TripsRouteImport.update({
@@ -88,8 +100,10 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
+  '/custom-trips': typeof CustomTripsRoute
   '/experiences': typeof ExperiencesRoute
   '/explore': typeof ExploreRouteWithChildren
+  '/travel-safety': typeof TravelSafetyRoute
   '/trips': typeof TripsRoute
   '/blog/$id': typeof BlogIdRoute
   '/explore/coastal-karnataka': typeof ExploreCoastalKarnatakaRoute
@@ -102,8 +116,10 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
+  '/custom-trips': typeof CustomTripsRoute
   '/experiences': typeof ExperiencesRoute
   '/explore': typeof ExploreRouteWithChildren
+  '/travel-safety': typeof TravelSafetyRoute
   '/trips': typeof TripsRoute
   '/blog/$id': typeof BlogIdRoute
   '/explore/coastal-karnataka': typeof ExploreCoastalKarnatakaRoute
@@ -117,8 +133,10 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
+  '/custom-trips': typeof CustomTripsRoute
   '/experiences': typeof ExperiencesRoute
   '/explore': typeof ExploreRouteWithChildren
+  '/travel-safety': typeof TravelSafetyRoute
   '/trips': typeof TripsRoute
   '/blog/$id': typeof BlogIdRoute
   '/explore/coastal-karnataka': typeof ExploreCoastalKarnatakaRoute
@@ -133,8 +151,10 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/contact'
+    | '/custom-trips'
     | '/experiences'
     | '/explore'
+    | '/travel-safety'
     | '/trips'
     | '/blog/$id'
     | '/explore/coastal-karnataka'
@@ -147,8 +167,10 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/contact'
+    | '/custom-trips'
     | '/experiences'
     | '/explore'
+    | '/travel-safety'
     | '/trips'
     | '/blog/$id'
     | '/explore/coastal-karnataka'
@@ -161,8 +183,10 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/contact'
+    | '/custom-trips'
     | '/experiences'
     | '/explore'
+    | '/travel-safety'
     | '/trips'
     | '/blog/$id'
     | '/explore/coastal-karnataka'
@@ -176,8 +200,10 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
+  CustomTripsRoute: typeof CustomTripsRoute
   ExperiencesRoute: typeof ExperiencesRoute
   ExploreRoute: typeof ExploreRouteWithChildren
+  TravelSafetyRoute: typeof TravelSafetyRoute
   TripsRoute: typeof TripsRoute
 }
 
@@ -211,6 +237,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/custom-trips': {
+      id: '/custom-trips'
+      path: '/custom-trips'
+      fullPath: '/custom-trips'
+      preLoaderRoute: typeof CustomTripsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/experiences': {
       id: '/experiences'
       path: '/experiences'
@@ -223,6 +256,13 @@ declare module '@tanstack/react-router' {
       path: '/explore'
       fullPath: '/explore'
       preLoaderRoute: typeof ExploreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/travel-safety': {
+      id: '/travel-safety'
+      path: '/travel-safety'
+      fullPath: '/travel-safety'
+      preLoaderRoute: typeof TravelSafetyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/trips': {
@@ -302,8 +342,10 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
+  CustomTripsRoute: CustomTripsRoute,
   ExperiencesRoute: ExperiencesRoute,
   ExploreRoute: ExploreRouteWithChildren,
+  TravelSafetyRoute: TravelSafetyRoute,
   TripsRoute: TripsRoute,
 }
 export const routeTree = rootRouteImport

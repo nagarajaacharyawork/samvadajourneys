@@ -16,8 +16,12 @@ export const Route = createFileRoute("/blog/$id")({
           { property: "og:title", content: loaderData.post.title },
           { property: "og:description", content: loaderData.post.excerpt },
           { property: "og:type", content: "article" },
+          { property: "og:url", content: `https://www.samvadajourneys.in/blog/${loaderData.post.id}` },
         ]
       : [{ title: "Story not found — Samvada Journeys" }, { name: "robots", content: "noindex" }],
+    links: loaderData
+      ? [{ rel: "canonical", href: `https://www.samvadajourneys.in/blog/${loaderData.post.id}` }]
+      : [],
   }),
   notFoundComponent: () => (
     <div className="mx-auto max-w-2xl px-6 py-32 text-center">

@@ -12,7 +12,10 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "The story behind Samvada Journeys and how homestays, cafés, and local operators can partner with us." },
       { property: "og:title", content: "About and Partner With Us — Samvada Journeys" },
       { property: "og:description", content: "Community-driven, entrepreneur-led experiential travel across India." },
+      { property: "og:url", content: "https://www.samvadajourneys.in/about" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://www.samvadajourneys.in/about" }],
   }),
   component: AboutPage,
 });

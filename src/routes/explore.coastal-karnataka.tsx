@@ -20,7 +20,12 @@ export const Route = createFileRoute("/explore/coastal-karnataka")({
     meta: [
       { title: "Coastal Karnataka — Samvada Journeys" },
       { name: "description", content: "Discover the hidden beaches, fishing villages, ancient temples and backwaters of Coastal Karnataka with Samvada Journeys." },
+      { property: "og:title", content: "Coastal Karnataka — Samvada Journeys" },
+      { property: "og:description", content: "Discover the hidden beaches, fishing villages, ancient temples and backwaters of Coastal Karnataka." },
+      { property: "og:url", content: "https://www.samvadajourneys.in/explore/coastal-karnataka" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://www.samvadajourneys.in/explore/coastal-karnataka" }],
   }),
   component: CoastalKarnataka,
 });

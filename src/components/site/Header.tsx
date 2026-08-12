@@ -35,6 +35,7 @@ const nav = [
 export function Header() {
   const [open, setOpen] = useState<string | null>(null);
   const [mobile, setMobile] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
   const isHome = pathname === "/";
@@ -55,7 +56,7 @@ export function Header() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-5 md:px-8">
         <Link to="/" className="flex items-center gap-3 min-w-0">
           <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#0B192C] ring-1 ring-white/20">
-            <img src="/samvada-logo-mark.png" alt="Samvada Journeys" className="h-9 w-9 rounded-full object-cover" />
+            <img src="/samvada-logo-mark.png" alt="Samvada Journeys logo" className="h-9 w-9 rounded-full object-cover" />
           </span>
           <span className="min-w-0">
             <span className="block truncate text-sm font-black tracking-[0.18em] text-white">
@@ -136,16 +137,49 @@ export function Header() {
             className="lg:hidden overflow-hidden bg-[#0B192C] border-t border-white/10"
           >
             <div className="flex flex-col p-4">
-              {nav.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.to}
-                  onClick={() => setMobile(false)}
-                  className="rounded-lg px-4 py-3 text-xs font-bold uppercase tracking-[0.22em] text-white/85 hover:bg-white/10"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {nav.map((item) =>
+                item.submenu ? (
+                  <div key={item.label}>
+                    <button
+                      onClick={() => setMobileOpen(mobileOpen === item.label ? null : item.label)}
+                      className="flex w-full items-center justify-between rounded-lg px-4 py-3 text-xs font-bold uppercase tracking-[0.22em] text-white/85 hover:bg-white/10"
+                    >
+                      {item.label}
+                      <ChevronDown className={`h-3 w-3 opacity-60 transition-transform ${mobileOpen === item.label ? "rotate-180" : ""}`} />
+                    </button>
+                    <AnimatePresence>
+                      {mobileOpen === item.label && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="overflow-hidden pl-4"
+                        >
+                          {item.submenu.map((sub) => (
+                            <Link
+                              key={sub.label}
+                              to={sub.to}
+                              onClick={() => { setMobile(false); setMobileOpen(null); }}
+                              className="block rounded-lg px-4 py-2.5 text-xs font-semibold tracking-[0.18em] text-white/70 hover:bg-white/10 hover:text-white"
+                            >
+                              {sub.label}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ) : (
+                  <Link
+                    key={item.label}
+                    to={item.to}
+                    onClick={() => setMobile(false)}
+                    className="rounded-lg px-4 py-3 text-xs font-bold uppercase tracking-[0.22em] text-white/85 hover:bg-white/10"
+                  >
+                    {item.label}
+                  </Link>
+                )
+              )}
               <Link
                 to="/contact"
                 onClick={() => setMobile(false)}

@@ -169,7 +169,7 @@ export const trips = [
     id: "paryaya-festival",
     title: "Paryaya Festival Insider",
     category: "Festival Special",
-    date: "18 Jan 2027",
+    date: "18 Jan 2028",
     from: "Udupi",
     price: "₹4,200",
     spots: 3,

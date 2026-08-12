@@ -12,7 +12,10 @@ export const Route = createFileRoute("/blog")({
       { name: "description", content: "Field notes from India's coasts, forests, and kitchens — told by the people who live there." },
       { property: "og:title", content: "Blog & Stories — Samvada Journeys" },
       { property: "og:description", content: "Local stories, travel guides, food and heritage journalism from Samvada Journeys." },
+      { property: "og:url", content: "https://www.samvadajourneys.in/blog" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://www.samvadajourneys.in/blog" }],
   }),
   component: BlogIndex,
 });

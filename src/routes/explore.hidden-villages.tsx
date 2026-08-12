@@ -15,7 +15,12 @@ export const Route = createFileRoute("/explore/hidden-villages")({
     meta: [
       { title: "Hidden Villages — Samvada Journeys" },
       { name: "description", content: "Discover the villages beyond the tourist trail. Traditional life, local artisans, village cuisine, and the quiet rhythms of rural coastal Karnataka." },
+      { property: "og:title", content: "Hidden Villages — Samvada Journeys" },
+      { property: "og:description", content: "Discover the villages beyond the tourist trail. Traditional life, local artisans, village cuisine, and the quiet rhythms of rural coastal Karnataka." },
+      { property: "og:url", content: "https://www.samvadajourneys.in/explore/hidden-villages" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://www.samvadajourneys.in/explore/hidden-villages" }],
   }),
   component: HiddenVillages,
 });
