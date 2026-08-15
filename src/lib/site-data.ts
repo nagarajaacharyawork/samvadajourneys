@@ -4,6 +4,12 @@ import expFood from "@/assets/imgi_22_677216968747c3a89492ff89_Moode Idli  kotte
 import expWaterfall from "@/assets/imgi_34_67456fb9ed1002405e16426a_DJI_0925-Enhanced-NR copy.webp";
 import expSunrise from "@/assets/imgi_4_67cd949f03e3822d94252b8b_spri.webp";
 import expCoffee from "@/assets/imgi_9_673840a46b26f4521bcc7a7a_Kodachadri Hills 3.webp";
+import tripMalpe from "@/assets/Malpe Coastal Weekender.webp";
+import tripKudlu from "@/assets/Kudlu Falls Monsoon Trek.webp";
+import tripKrishna from "@/assets/Krishna Matha Heritage Walk.webp";
+import tripKaup from "@/assets/Kaup Sunrise and Lighthouse Morning.webp";
+import tripCoffee from "@/assets/Coffee.webp";
+import tripParyaya from "@/assets/Paryaya Festival Insider.webp";
 import expCorporate from "@/assets/imgi_14_675fffd94726e2249fcad7a1_DSC03674.webp";
 import galleryCulture from "@/assets/imgi_25_6772135f6e792f9e5aad99f0_471489661_512039215186411_7174681571825144467_n.webp";
 import galleryNature from "@/assets/imgi_48_67cd956958e2299374d3d90b_Nature-p-1080.webp";
@@ -113,7 +119,7 @@ export const trips = [
     from: "Bengaluru",
     price: "₹8,900",
     spots: 4,
-    image: expCoastal,
+    image: tripMalpe,
   },
   {
     id: "udupi-food-trail",
@@ -133,7 +139,7 @@ export const trips = [
     from: "Udupi",
     price: "₹2,800",
     spots: 2,
-    image: expWaterfall,
+    image: tripKudlu,
   },
   {
     id: "krishna-heritage",
@@ -143,7 +149,7 @@ export const trips = [
     from: "Udupi",
     price: "₹1,900",
     spots: 10,
-    image: expHeritage,
+    image: tripKrishna,
   },
   {
     id: "kaup-sunrise",
@@ -153,7 +159,7 @@ export const trips = [
     from: "Udupi",
     price: "₹1,400",
     spots: 8,
-    image: expSunrise,
+    image: tripKaup,
   },
   {
     id: "chikmagalur-estate",
@@ -163,7 +169,7 @@ export const trips = [
     from: "Bengaluru",
     price: "₹14,500",
     spots: 5,
-    image: expCoffee,
+    image: tripCoffee,
   },
   {
     id: "paryaya-festival",
@@ -173,7 +179,7 @@ export const trips = [
     from: "Udupi",
     price: "₹4,200",
     spots: 3,
-    image: expHeritage,
+    image: tripParyaya,
   },
 ];
 
