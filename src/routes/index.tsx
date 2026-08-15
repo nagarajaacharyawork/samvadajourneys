@@ -379,10 +379,7 @@ function UpcomingTrips() {
                 </div>
                 <h3 className="text-2xl leading-tight text-white" style={{ fontFamily: "Fraunces, serif" }}>{t.title}</h3>
                 <div className="mt-4 flex items-center justify-between border-t border-white/20 pt-4">
-                  <div className="text-white">
-                    <div className="text-[10px] uppercase tracking-[0.28em] text-white/60">From {t.from}</div>
-                    <div className="text-xl font-bold" style={{ fontFamily: "Fraunces, serif" }}>{t.price}</div>
-                  </div>
+                  <div className="text-[10px] uppercase tracking-[0.28em] text-white/60">From {t.from}</div>
                   <Link to="/trips" className="border border-white/40 bg-white/5 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.28em] text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-[#0B192C]">
                     Reserve
                   </Link>
