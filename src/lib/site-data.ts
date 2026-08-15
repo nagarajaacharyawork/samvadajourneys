@@ -1,4 +1,4 @@
-import expCoastal from "@/assets/Malpe harbour.jpg";
+import expCoastal from "@/assets/CoastalExplorer.webp";
 import expHeritage from "@/assets/Krishna Matha Heritage Walk.webp";
 import expFood from "@/assets/cuisine.jpg";
 import expWaterfall from "@/assets/Kudlu Falls Monsoon Trek.webp";
