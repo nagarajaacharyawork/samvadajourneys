@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <img src="/samvada journey's profile (blue + white).jpg.jpeg" alt="Samvada Journeys logo" className="h-12 w-12 rounded-full object-cover" />
+              <img src="/samvada-logo.jpeg" alt="Samvada Journeys logo" className="h-12 w-12 rounded-full object-cover" />
               <div>
                 <div className="text-lg font-black tracking-tight">SAMVADA</div>
                 <div className="text-[10px] font-semibold tracking-[0.28em] opacity-80">JOURNEYS</div>

@@ -186,7 +186,7 @@ export const trips = [
 export const gallery = [
   { src: galleryCulture, category: "Culture", alt: "Yakshagana performer" },
   { src: galleryNature, category: "Nature", alt: "St. Mary's Island" },
-  { src: galleryPeople, category: "People", alt: "Travelers at sunset" },
+  { src: galleryPeople, category: "Food", alt: "Travelers at sunset" },
   { src: expCoastal, category: "Adventure", alt: "Fishermen at sunrise" },
   { src: expFood, category: "Food", alt: "Banana leaf meal" },
   { src: expSunrise, category: "Memories", alt: "Sunset silhouette" },
