@@ -1,14 +1,12 @@
-import { createFileRoute, useSearch } from "@tanstack/react-router";
-import { motion } from "framer-motion";
+import { createFileRoute, useSearch, useNavigate } from "@tanstack/react-router";
 import { Calendar, MapPin, Search } from "lucide-react";
 import { useState, useEffect } from "react";
-import { toast } from "sonner";
 import { trips } from "@/lib/site-data";
 import { SectionHeading } from "@/components/site/SectionHeading";
 
 export const Route = createFileRoute("/trips")({
   validateSearch: (search: Record<string, unknown>) => ({
-    cat: typeof search.cat === "string" ? search.cat : "",
+    cat: typeof search.cat === "string" ? search.cat : undefined,
   }),
   head: () => ({
     meta: [
@@ -28,12 +26,12 @@ const cats = ["All", "Weekend Explorer", "Food Trails", "Waterfall Treks", "Heri
 
 function TripsPage() {
   const { cat: catParam } = useSearch({ from: "/trips" });
+  const navigate = useNavigate();
   const [q, setQ] = useState("");
-  const [cat, setCat] = useState(catParam || "All");
-  const [reserving, setReserving] = useState<string | null>(null);
+  const [cat, setCat] = useState(catParam ?? "All");
 
   useEffect(() => {
-    setCat(catParam || "All");
+    setCat(catParam ?? "All");
   }, [catParam]);
 
   const filtered = trips.filter((t) => (cat === "All" || t.category === cat) && (t.title.toLowerCase().includes(q.toLowerCase()) || t.from.toLowerCase().includes(q.toLowerCase())));
@@ -76,12 +74,8 @@ function TripsPage() {
         <div className="mx-auto max-w-7xl px-6 md:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {filtered.map((t, i) => (
-              <motion.article
+              <article
                 key={t.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: (i % 3) * 0.06, duration: 0.45 }}
                 className="overflow-hidden rounded-3xl border border-foreground/10 bg-card"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
@@ -99,7 +93,7 @@ function TripsPage() {
                   </div>
                   <div className="mt-5 flex items-center justify-end">
                     <button
-                      onClick={() => setReserving(t.id)}
+                      onClick={() => navigate({ to: "/contact" })}
                       className="rounded-full px-4 py-2 text-sm font-semibold text-primary-foreground"
                       style={{ background: "var(--brand-terracotta)" }}
                     >
@@ -107,7 +101,7 @@ function TripsPage() {
                     </button>
                   </div>
                 </div>
-              </motion.article>
+              </article>
             ))}
             {filtered.length === 0 && (
               <div className="col-span-full rounded-2xl border border-dashed border-foreground/15 py-16 text-center text-sm text-muted-foreground">
@@ -118,49 +112,6 @@ function TripsPage() {
         </div>
       </section>
 
-      {reserving && (
-        <ReserveModal
-          trip={trips.find((t) => t.id === reserving)!}
-          onClose={() => setReserving(null)}
-          onSubmit={() => {
-            setReserving(null);
-            toast.success("Seat reserved!", { description: "Our host will call within 12 hours to confirm details." });
-          }}
-        />
-      )}
-    </div>
-  );
-}
-
-function ReserveModal({ trip, onClose, onSubmit }: { trip: (typeof trips)[number]; onClose: () => void; onSubmit: () => void }) {
-  return (
-    <div className="fixed inset-0 z-[100] grid place-items-center bg-black/60 p-4" onClick={onClose}>
-      <motion.form
-        initial={{ opacity: 0, y: 20, scale: 0.98 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        onClick={(e) => e.stopPropagation()}
-        onSubmit={(e) => {
-          e.preventDefault();
-          onSubmit();
-        }}
-        className="w-full max-w-md rounded-3xl bg-card p-6 shadow-2xl"
-      >
-        <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">Reserve Seat</div>
-        <div className="mt-1 text-xl font-black">{trip.title}</div>
-        <div className="mt-1 text-xs text-muted-foreground">{trip.date} {trip.from}</div>
-        <div className="mt-5 grid gap-3">
-          <input required placeholder="Your name" className="rounded-xl border border-foreground/10 bg-foreground/5 px-4 py-3 text-sm outline-none focus:border-foreground/30" />
-          <input required type="tel" placeholder="Phone number" className="rounded-xl border border-foreground/10 bg-foreground/5 px-4 py-3 text-sm outline-none focus:border-foreground/30" />
-          <input required type="email" placeholder="Email" className="rounded-xl border border-foreground/10 bg-foreground/5 px-4 py-3 text-sm outline-none focus:border-foreground/30" />
-          <input required type="number" min={1} max={10} defaultValue={2} placeholder="Travelers" className="rounded-xl border border-foreground/10 bg-foreground/5 px-4 py-3 text-sm outline-none focus:border-foreground/30" />
-        </div>
-        <button type="submit" className="mt-5 w-full rounded-full py-3 text-sm font-semibold text-primary-foreground" style={{ background: "var(--brand-terracotta)" }}>
-          Confirm Reservation
-        </button>
-        <button type="button" onClick={onClose} className="mt-2 w-full rounded-full py-2.5 text-sm font-medium text-muted-foreground">
-          Cancel
-        </button>
-      </motion.form>
     </div>
   );
 }
