@@ -6,7 +6,7 @@ import expHeritage from "@/assets/imgi_23_677215f313af8fcb3bd47c1b_Varanga Tradi
 import expFood from "@/assets/imgi_22_677216968747c3a89492ff89_Moode Idli  kotte Kadubu.webp";
 import expWaterfall from "@/assets/imgi_34_67456fb9ed1002405e16426a_DJI_0925-Enhanced-NR copy.webp";
 import expSunrise from "@/assets/imgi_4_67cd949f03e3822d94252b8b_spri.webp";
-import expCoffee from "@/assets/imgi_9_673840a46b26f4521bcc7a7a_Kodachadri Hills 3.webp";
+import expCoffee from "@/assets/Coffee.webp";
 import expCorporate from "@/assets/imgi_14_675fffd94726e2249fcad7a1_DSC03674.webp";
 import expPeople from "@/assets/imgi_20_67737f871ccf77fed3275d35_469479383_17892428070108648_6886044078070230829_n.webp";
 

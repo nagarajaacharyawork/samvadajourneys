@@ -26,28 +26,21 @@ const nav = [
       { label: "Corporate Retreats", to: "/experiences#corporate-retreats" },
     ],
   },
-  { label: "Plan", to: "/trips" },
   {
-    label: "Categories",
+    label: "Trips",
     to: "/trips",
     submenu: [
-      { label: "Weekend Explorer", to: "/trips" },
-      { label: "Food Trails", to: "/trips" },
-      { label: "Waterfall Treks", to: "/trips" },
-      { label: "Heritage Walks", to: "/trips" },
-      { label: "Coffee Estates", to: "/trips" },
-      { label: "Festival Special", to: "/trips" },
+      { label: "Weekend Explorer", to: "/trips?cat=Weekend+Explorer" },
+      { label: "Food Trails", to: "/trips?cat=Food+Trails" },
+      { label: "Waterfall Treks", to: "/trips?cat=Waterfall+Treks" },
+      { label: "Heritage Walks", to: "/trips?cat=Heritage+Walks" },
+      { label: "Coffee Estates", to: "/trips?cat=Coffee+Estates" },
+      { label: "Festival Special", to: "/trips?cat=Festival+Special" },
     ],
   },
-  {
-    label: "More",
-    to: "/",
-    submenu: [
-      { label: "Blog", to: "/blog" },
-      { label: "About", to: "/about" },
-      { label: "Contact", to: "/contact" },
-    ],
-  },
+  { label: "Blog", to: "/blog" },
+  { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
 ];
 
 export function Header() {

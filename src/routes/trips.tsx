@@ -1,12 +1,15 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useSearch } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Search } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "sonner";
 import { trips } from "@/lib/site-data";
 import { SectionHeading } from "@/components/site/SectionHeading";
 
 export const Route = createFileRoute("/trips")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    cat: typeof search.cat === "string" ? search.cat : "",
+  }),
   head: () => ({
     meta: [
       { title: "Upcoming Trips — Samvada Journeys" },
@@ -24,9 +27,15 @@ export const Route = createFileRoute("/trips")({
 const cats = ["All", "Weekend Explorer", "Food Trails", "Waterfall Treks", "Heritage Walks", "Sunrise", "Coffee Estates", "Festival Special"];
 
 function TripsPage() {
+  const { cat: catParam } = useSearch({ from: "/trips" });
   const [q, setQ] = useState("");
-  const [cat, setCat] = useState("All");
+  const [cat, setCat] = useState(catParam || "All");
   const [reserving, setReserving] = useState<string | null>(null);
+
+  useEffect(() => {
+    setCat(catParam || "All");
+  }, [catParam]);
+
   const filtered = trips.filter((t) => (cat === "All" || t.category === cat) && (t.title.toLowerCase().includes(q.toLowerCase()) || t.from.toLowerCase().includes(q.toLowerCase())));
 
   return (
@@ -88,11 +97,7 @@ function TripsPage() {
                     <span className="inline-flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5" />{t.date}</span>
                     <span className="inline-flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5" />{t.from}</span>
                   </div>
-                  <div className="mt-5 flex items-center justify-between">
-                    <div>
-                      <div className="text-[11px] uppercase tracking-widest text-muted-foreground">From</div>
-                      <div className="text-xl font-black">{t.price}</div>
-                    </div>
+                  <div className="mt-5 flex items-center justify-end">
                     <button
                       onClick={() => setReserving(t.id)}
                       className="rounded-full px-4 py-2 text-sm font-semibold text-primary-foreground"
