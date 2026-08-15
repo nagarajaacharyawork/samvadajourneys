@@ -98,7 +98,6 @@ const data: DestinationData = {
     { q: "Do the families speak English?", a: "Most village families speak Tulu and Kannada. Our guides translate and facilitate the conversation. The language barrier is rarely an obstacle. Hospitality is universal, and a shared meal communicates more than words." },
     { q: "What is Moode Idli?", a: "Moode Idli is a traditional coastal Karnataka breakfast. Rice batter fermented overnight and steamed inside screw pine leaves, which give it a distinctive flavour and aroma. You cannot find it in restaurants. It exists only in village kitchens." },
     { q: "How does Samvada ensure that village tourism benefits the community?", a: "We pay our village hosts directly and fairly. No intermediaries, no commission structures. We work with communities to ensure that the tourism we bring is on their terms and at a scale they are comfortable with." },
-    { q: "Can I participate in a Bhoota Kola ritual?", a: "Bhoota Kola rituals are community events, not tourist performances. In some cases, visitors are welcome to observe from a respectful distance. We always check with the community before making any arrangements." },
   ],
 };
 

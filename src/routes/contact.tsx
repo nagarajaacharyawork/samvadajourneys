@@ -78,7 +78,7 @@ function ContactPage() {
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <Field label="Name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} />
               <Field label="Phone" value={form.phone} onChange={(v) => setForm({ ...form, phone: v })} type="tel" />
-              <Field label="Email" value={form.email} onChange={(v) => setForm({ ...form, email: v })} type="email" />
+              <Field label="Email (optional)" value={form.email} onChange={(v) => setForm({ ...form, email: v })} type="email" required={false} />
               <Field label="Preferred Destination" value={form.destination} onChange={(v) => setForm({ ...form, destination: v })} placeholder="Udupi, Chikmagalur, Coorg…" />
               <Field label="Travel Date" value={form.date} onChange={(v) => setForm({ ...form, date: v })} type="date" />
               <Field label="Travelers" value={form.travelers} onChange={(v) => setForm({ ...form, travelers: v })} type="number" />
@@ -95,11 +95,12 @@ function ContactPage() {
   );
 }
 
-function Field({ label, value, onChange, type = "text", placeholder }: { label: string; value: string; onChange: (v: string) => void; type?: string; placeholder?: string }) {
+function Field({ label, value, onChange, type = "text", placeholder, required }: { label: string; value: string; onChange: (v: string) => void; type?: string; placeholder?: string; required?: boolean }) {
+  const isRequired = required !== undefined ? required : type !== "date";
   return (
     <div>
       <label className="block text-xs font-semibold uppercase tracking-widest text-muted-foreground">{label}</label>
-      <input required={type !== "date"} type={type} value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} className="mt-2 w-full rounded-xl border border-foreground/10 bg-foreground/[0.03] px-4 py-3 text-sm outline-none focus:border-foreground/30" />
+      <input required={isRequired} type={type} value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} className="mt-2 w-full rounded-xl border border-foreground/10 bg-foreground/[0.03] px-4 py-3 text-sm outline-none focus:border-foreground/30" />
     </div>
   );
 }

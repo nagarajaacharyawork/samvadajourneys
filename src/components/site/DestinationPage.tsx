@@ -98,8 +98,12 @@ export function PageFAQ({ faqs }: { faqs: FAQ[] }) {
     <section className="bg-[#F9F9FB] py-20 md:py-28">
       <div className="mx-auto max-w-3xl px-6 md:px-8">
         <div className="mb-12 text-center">
-          <SectionLabel text="Frequently Asked Questions" />
-          <SectionTitle>Answers to what travellers ask most.</SectionTitle>
+          <div className="mb-5 flex items-center justify-center gap-3 text-[10px] font-bold uppercase tracking-[0.45em] text-[#0B192C]/60">
+            <span className="h-px w-8 bg-[#0B192C]/30" />
+            Frequently Asked Questions
+            <span className="h-px w-8 bg-[#0B192C]/30" />
+          </div>
+          <SectionTitle center>Answers to what travellers ask most.</SectionTitle>
         </div>
         <div className="space-y-3">
           {faqs.map((faq, i) => (

@@ -98,7 +98,6 @@ const data: DestinationData = {
     { q: "Can I attend a Yakshagana performance?", a: "Yes. The Yakshagana season runs from November to May. We arrange front seats and a backstage meeting with the artists after the performance." },
     { q: "What is the Paryaya festival?", a: "The Paryaya is a biennial ceremony at the Udupi Krishna Matha in which the administration of the temple passes from one monastery to another. It is one of the most important religious events in Karnataka. The next Paryaya is in January 2028." },
     { q: "Are the artisan workshops open to visitors?", a: "Most are, with prior arrangement. We have relationships with several master craftspeople in Moodabidri who are happy to welcome visitors and explain their work." },
-    { q: "What is Bhoota Kola?", a: "Bhoota Kola is a spirit-propitiation ritual practised in village shrines across the Tulu coast. A performer channels a local spirit and delivers blessings and verdicts to the community. Visitors are sometimes welcome to observe from a respectful distance." },
   ],
 };
 

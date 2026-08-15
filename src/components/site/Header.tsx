@@ -27,9 +27,27 @@ const nav = [
     ],
   },
   { label: "Plan", to: "/trips" },
-  { label: "Blog", to: "/blog" },
-  { label: "About", to: "/about" },
-  { label: "Contact", to: "/contact" },
+  {
+    label: "Categories",
+    to: "/trips",
+    submenu: [
+      { label: "Weekend Explorer", to: "/trips" },
+      { label: "Food Trails", to: "/trips" },
+      { label: "Waterfall Treks", to: "/trips" },
+      { label: "Heritage Walks", to: "/trips" },
+      { label: "Coffee Estates", to: "/trips" },
+      { label: "Festival Special", to: "/trips" },
+    ],
+  },
+  {
+    label: "More",
+    to: "/",
+    submenu: [
+      { label: "Blog", to: "/blog" },
+      { label: "About", to: "/about" },
+      { label: "Contact", to: "/contact" },
+    ],
+  },
 ];
 
 export function Header() {
