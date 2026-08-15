@@ -1,9 +1,9 @@
-import expCoastal from "@/assets/imgi_13_675ffeed8edd871379a0092d_DJI_0519-Enhanced-NR copy.webp";
-import expHeritage from "@/assets/imgi_23_677215f313af8fcb3bd47c1b_Varanga Traditional Kambala 2024.webp";
-import expFood from "@/assets/imgi_22_677216968747c3a89492ff89_Moode Idli  kotte Kadubu.webp";
-import expWaterfall from "@/assets/imgi_34_67456fb9ed1002405e16426a_DJI_0925-Enhanced-NR copy.webp";
-import expSunrise from "@/assets/imgi_4_67cd949f03e3822d94252b8b_spri.webp";
-import expCoffee from "@/assets/imgi_9_673840a46b26f4521bcc7a7a_Kodachadri Hills 3.webp";
+import expCoastal from "@/assets/Malpe harbour.jpg";
+import expHeritage from "@/assets/Krishna Matha Heritage Walk.webp";
+import expFood from "@/assets/cuisine.jpg";
+import expWaterfall from "@/assets/Kudlu Falls Monsoon Trek.webp";
+import expSunrise from "@/assets/Kaup Sunrise and Lighthouse Morning.webp";
+import expCoffee from "@/assets/Coffee.webp";
 import tripMalpe from "@/assets/Malpe Coastal Weekender.webp";
 import tripKudlu from "@/assets/Kudlu Falls Monsoon Trek.webp";
 import tripKrishna from "@/assets/Krishna Matha Heritage Walk.webp";
