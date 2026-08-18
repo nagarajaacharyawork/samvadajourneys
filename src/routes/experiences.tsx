@@ -4,10 +4,10 @@ import { ArrowRight, Clock, Users } from "lucide-react";
 import expCoastal from "@/assets/imgi_13_675ffeed8edd871379a0092d_DJI_0519-Enhanced-NR copy.webp";
 import expHeritage from "@/assets/imgi_23_677215f313af8fcb3bd47c1b_Varanga Traditional Kambala 2024.webp";
 import expFood from "@/assets/imgi_22_677216968747c3a89492ff89_Moode Idli  kotte Kadubu.webp";
-import expWaterfall from "@/assets/imgi_34_67456fb9ed1002405e16426a_DJI_0925-Enhanced-NR copy.webp";
+import expWaterfall from "@/assets/exp-waterfall.jpg";
 import expSunrise from "@/assets/imgi_4_67cd949f03e3822d94252b8b_spri.webp";
 import expCoffee from "@/assets/Coffee.webp";
-import expCorporate from "@/assets/imgi_14_675fffd94726e2249fcad7a1_DSC03674.webp";
+import expCorporate from "@/assets/gallery-people.jpg";
 import expPeople from "@/assets/imgi_20_67737f871ccf77fed3275d35_469479383_17892428070108648_6886044078070230829_n.webp";
 
 export const Route = createFileRoute("/experiences")({
@@ -115,11 +115,11 @@ const sections = [
   },
 ];
 
-function SectionLabel({ text, invert = false }: { text: string; invert?: boolean }) {
+function SectionLabel({ text, invert = false, center = false }: { text: string; invert?: boolean; center?: boolean }) {
   const col = invert ? "text-white/60" : "text-[#0B192C]/60";
   const line = invert ? "bg-white/30" : "bg-[#0B192C]/30";
   return (
-    <div className={`mb-5 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.45em] ${col}`}>
+    <div className={`mb-5 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.45em] ${col} ${center ? "justify-center" : ""}`}>
       <span className={`h-px w-8 ${line}`} />
       {text}
       <span className={`h-px w-8 ${line}`} />
@@ -134,7 +134,7 @@ function ExperiencesPage() {
       {/* Page Hero */}
       <section className="relative pt-40 pb-20" style={{ background: OCEAN }}>
         <div className="mx-auto max-w-7xl px-6 md:px-8 text-center">
-          <SectionLabel text="Our Experiences" invert />
+          <SectionLabel text="Our Experiences" invert center />
           <h1 className="mx-auto max-w-4xl text-balance text-5xl leading-[1.05] tracking-tight text-white md:text-6xl" style={{ fontFamily: "Fraunces, serif" }}>
             Six ways to experience <em className="italic font-light">real India.</em>
           </h1>

@@ -7,6 +7,8 @@ import { ImageBannerWithQuote } from "@/components/site/DestinationPageEnhanceme
 import heroImg from "@/assets/Hidden Villages.jpeg";
 import img1 from "@/assets/imgi_22_677216968747c3a89492ff89_Moode Idli  kotte Kadubu.webp";
 import img2 from "@/assets/imgi_12_675ffe1e96ccefdef53fff51_IMG_1101-Enhanced-NR.webp";
+import belkalVillage from "@/assets/Belkal village roads.jpg";
+import villageRoad from "@/assets/village road.jpeg";
 import img3 from "@/assets/imgi_25_6772135f6e792f9e5aad99f0_471489661_512039215186411_7174681571825144467_n.webp";
 import img4 from "@/assets/imgi_14_675fffd94726e2249fcad7a1_DSC03674.webp";
 
@@ -32,39 +34,39 @@ const data: DestinationData = {
   heroSubtitle: "The most interesting places are never on the tourist map.",
   eyebrow: "Explore",
   about: [
-    "Sumitra has been making Moode Idli since 4 AM. She wraps rice batter in screw pine leaves and stacks them over a wood fire. She has done this every morning for forty years. She is not doing it for tourists.",
+    "Belkal is not on any tourist map. The road into the village is narrow, flanked by areca palms and paddy fields. In the morning, before the heat arrives, the village moves at a pace that the rest of the world has largely forgotten.",
   ],
   whyVisit: [
-    "Moode Idli and Kotte Kadubu. Village breakfast dishes that no restaurant in the world can replicate.",
+    "Belkal village roads lined with areca palms, paddy fields, and the unhurried rhythm of daily rural life.",
+    "Morning routines that begin before sunrise — cattle, fields, the first smoke from wood-fired kitchens.",
     "Paddy farming traditions unchanged for centuries, still practised by hand in flooded fields.",
-    "Handloom weaving on traditional pit looms. Fabrics made for local use, not export.",
-    "Spice gardens where pepper, cardamom, and areca palm grow together in a living pantry.",
-    "Homestay hospitality that is genuine, not commercial. Meals cooked on wood fire, evenings on the veranda.",
+    "Kambala, the traditional buffalo race of the Tulu coast, held in flooded paddy fields each season.",
+    "Yakshagana, the all-night classical theatre of coastal Karnataka, performed in village courtyards.",
     "Direct economic contribution to communities that benefit from thoughtful, small-scale tourism.",
   ],
   attractions: [
+    { name: "Belkal Village Roads", description: "Narrow lanes through areca groves and paddy fields. The village reveals itself slowly, on foot, at walking pace.", bestTime: "Oct to Feb", badge: "Village Life" },
+    { name: "Morning Village Routines", description: "Cattle led to fields, wells drawn, wood fires lit. The daily life of a village before the rest of the world wakes up.", bestTime: "Year Round", badge: "Daily Life" },
     { name: "Paddy Village Walks", description: "Flooded terraces that mirror the sky, worked by hand from planting to harvest.", bestTime: "Jun to Feb", badge: "Agricultural Heritage" },
-    { name: "Fishing Community Life", description: "Boat-building yards, net-mending circles, fish-drying racks. An economy organised around the sea.", bestTime: "Oct to Feb", badge: "Living Economy" },
-    { name: "Handloom Weaving Villages", description: "Traditional pit looms producing fabrics sold locally and used in temple rituals.", bestTime: "Year Round", badge: "Textile Tradition" },
-    { name: "Spice Garden Trails", description: "Pepper, cardamom, turmeric, ginger. A walk through a working spice garden with the farmer.", bestTime: "Oct to Feb", badge: "Spice Country" },
+    { name: "Kambala", description: "The traditional buffalo race of the Tulu coast. Held in flooded paddy fields, it is one of the most visually extraordinary events in rural Karnataka.", bestTime: "Nov to Mar", badge: "Living Tradition" },
+    { name: "Yakshagana", description: "Classical theatre performed through the night in village courtyards. Elaborate costumes, mythological stories, and a tradition that has survived for centuries.", bestTime: "Nov to May", badge: "Performing Arts" },
     { name: "Village Sacred Geography", description: "Shrines, sacred trees, and ritual spaces that map the spiritual life of each community.", bestTime: "Year Round", badge: "Sacred Spaces" },
-    { name: "Traditional Village Kitchens", description: "Wood-fired stoves, stone grinders, clay pots. Recipes that exist nowhere in writing.", bestTime: "Year Round", badge: "Culinary Heritage" },
   ],
   experiences: [
-    { title: "Village Morning Walk", duration: "3 Hours", groupSize: "2 to 6 People", difficulty: "Easy", description: "Paddy fields at dawn, the crossroads shrine, the elder on the veranda. A conversation with a place." },
-    { title: "Farm Immersion", duration: "Half Day", groupSize: "2 to 6 People", difficulty: "Easy", description: "A morning on a working paddy, coconut, or spice farm. Plant, weed, carry. Leave with a different understanding of food." },
-    { title: "Village Kitchen Session", duration: "Half Day", groupSize: "2 to 6 People", difficulty: "Easy", description: "Moode Idli in screw pine leaves, Kotte Kadubu in jackfruit leaves, fish curry in a clay pot on stone-ground coconut." },
+    { title: "Belkal Village Morning Walk", duration: "3 Hours", groupSize: "2 to 6 People", difficulty: "Easy", description: "The village road at dawn. Paddy fields, areca groves, the elder on the veranda, the cattle heading out. A conversation with a place that has not changed in generations." },
+    { title: "Farm Immersion", duration: "Half Day", groupSize: "2 to 6 People", difficulty: "Easy", description: "A morning on a working paddy, coconut, or spice farm. Plant, weed, carry. Leave with a different understanding of where food comes from." },
+    { title: "Kambala Experience", duration: "Half Day", groupSize: "2 to 12 People", difficulty: "Easy", description: "Witness the traditional buffalo race in flooded paddy fields. One of the most visually extraordinary events in rural coastal Karnataka, and almost entirely unknown outside the region." },
+    { title: "Yakshagana Evening", duration: "3 to 6 Hours", groupSize: "2 to 12 People", difficulty: "Easy", description: "Watch a Yakshagana performance in a village courtyard. Elaborate costumes, mythological stories, and a theatrical tradition that has been performed through the night for centuries." },
+    { title: "Village Homestay", duration: "1 to 2 Nights", groupSize: "2 to 4 People", difficulty: "Easy", description: "Wood-fire meals, veranda evenings, mornings before sunrise. Living at the pace of the family. Local food cooked the way it has always been cooked." },
     { title: "Craft Workshop", duration: "Half Day", groupSize: "2 to 6 People", difficulty: "Easy", description: "Weaver, potter, or coir worker. Make something with your hands. The object you take home will mean more than anything you could buy." },
-    { title: "Village Homestay", duration: "1 to 2 Nights", groupSize: "2 to 4 People", difficulty: "Easy", description: "Wood-fire meals, veranda evenings, mornings before sunrise. Living at the pace of the family." },
-    { title: "Cultural Evening", duration: "3 Hours", groupSize: "2 to 12 People", difficulty: "Easy", description: "Bhoota Kola observed from a respectful distance, Yakshagana in a village courtyard, or a fire with the elders." },
   ],
   itineraries: [
-    { label: "Half Day", plan: "Village walk. Traditional kitchen. Moode Idli breakfast with the family. Paddy fields. Return by noon." },
-    { label: "One Day", plan: "Farm experience. Village walk. Cooking session. Home lunch. Craft workshop. Spice garden." },
-    { label: "Weekend", plan: "Day 1: Village walk, farm, veranda dinner. Day 2: Cooking, craft workshop, cultural evening." },
-    { label: "Three Days", plan: "Day 1: Village and farm. Day 2: Cooking, craft, spice garden. Day 3: Fishing village, sacred walk, cultural evening." },
+    { label: "Half Day", plan: "Belkal village road walk. Paddy fields at dawn. Morning routines with the family. Return by noon." },
+    { label: "One Day", plan: "Farm experience. Village walk. Home lunch. Craft workshop. Evening Yakshagana performance." },
+    { label: "Weekend", plan: "Day 1: Village walk, farm, veranda dinner. Day 2: Kambala experience, craft workshop, cultural evening." },
+    { label: "Three Days", plan: "Day 1: Village and farm. Day 2: Kambala and craft. Day 3: Yakshagana performance, sacred walk, village homestay." },
   ],
-  culture: "The culture of these villages lives in food, festivals, and the sacred. The elders carry knowledge of land, sea, and plants accumulated over generations, passed on through practice and story, never written down. Samvada's work is, in part, about making sure it doesn't disappear.",
+  culture: "The culture of Belkal and the villages around it lives in the daily routines, the festivals, and the sacred. Kambala and Yakshagana are not performances staged for visitors — they are living traditions that the community practises for itself. The elders carry knowledge of land, seasons, and ritual accumulated over generations, passed on through practice and story, never written down. Samvada's work is, in part, about making sure it doesn't disappear.",
   bestTime: [
     { season: "October to February", note: "Harvest in, cool weather, full festival calendar. Village life at its most active." },
     { season: "March to May", note: "Warm and quiet. Good for cooking and craft. Manageable in the shade of coconut groves." },
@@ -79,12 +81,12 @@ const data: DestinationData = {
   ],
   stats: [
     { number: "40+", label: "Village Communities" },
-    { number: "4 AM", label: "When the Kitchen Starts" },
-    { number: "3 Gen", label: "Average Recipe Age" },
+    { number: "5 AM", label: "When the Village Wakes" },
+    { number: "Nov–Mar", label: "Kambala Season" },
     { number: "100%", label: "Direct to Community" },
   ],
   cinematicQuotes: [
-    { image: img1, quote: "To know a cuisine is to know a people. To cook with them is to become, briefly, one of them.", author: "Attributed to various" },
+    { image: villageRoad, quote: "The village road is the first story. Walk it slowly enough and the rest reveals itself.", author: "Samvada Journeys" },
     { image: img4, quote: "Hospitality is not a transaction. It is a declaration of shared humanity.", author: "Traditional Tulu proverb" },
   ],
   gallery: [
@@ -96,7 +98,8 @@ const data: DestinationData = {
   faqs: [
     { q: "Are the villages comfortable for visitors who are not used to rural India?", a: "We work with villages that are accustomed to welcoming guests and can provide a comfortable experience without compromising the authenticity of the visit. We'll brief you fully on what to expect before you go." },
     { q: "Do the families speak English?", a: "Most village families speak Tulu and Kannada. Our guides translate and facilitate the conversation. The language barrier is rarely an obstacle. Hospitality is universal, and a shared meal communicates more than words." },
-    { q: "What is Moode Idli?", a: "Moode Idli is a traditional coastal Karnataka breakfast. Rice batter fermented overnight and steamed inside screw pine leaves, which give it a distinctive flavour and aroma. You cannot find it in restaurants. It exists only in village kitchens." },
+    { q: "What is Kambala?", a: "Kambala is the traditional buffalo race of the Tulu coast, held in flooded paddy fields between November and March. It is one of the most visually extraordinary events in rural Karnataka and an important part of the cultural calendar of the region." },
+    { q: "What is Yakshagana?", a: "Yakshagana is a classical theatre form from coastal Karnataka, performed through the night in village courtyards. Elaborate costumes, mythological stories drawn from the epics, and a tradition that has been practised for centuries. Watching it in a village setting, rather than on a stage, is an entirely different experience." },
     { q: "How does Samvada ensure that village tourism benefits the community?", a: "We pay our village hosts directly and fairly. No intermediaries, no commission structures. We work with communities to ensure that the tourism we bring is on their terms and at a scale they are comfortable with." },
   ],
 };
@@ -109,18 +112,18 @@ function HiddenVillages() {
       {/* 1 — Hero */}
       <PageHero data={data} />
 
-      {/* 2 — Opening story: full-width editorial, image right */}
-      <section className="bg-[#F9F9FB] py-24 md:py-32">
+      {/* 2 — Opening story: compact two-column */}
+      <section className="bg-[#F9F9FB] py-14 md:py-20">
         <div className="mx-auto max-w-7xl px-6 md:px-8">
-          <div className="grid gap-16 md:grid-cols-[3fr_2fr] items-start">
+          <div className="grid gap-10 md:grid-cols-[1fr_340px] items-center">
             <div>
               <SectionLabel text="The Story" />
               <SectionTitle>A guest, not a tourist. The difference is everything.</SectionTitle>
-              <div className="mt-8 space-y-5">
+              <div className="mt-5 space-y-4">
                 <motion.p initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-base leading-[1.9] text-[#0B192C]/75">
                   {data.about[0]}
                 </motion.p>
-                <ul className="space-y-2">
+                <ul className="space-y-1.5">
                   {data.whyVisit.map((w, i) => (
                     <motion.li key={i} initial={{ opacity: 0, x: -8 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} className="flex items-start gap-3 text-sm text-[#0B192C]/70">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: C }} />
@@ -130,15 +133,14 @@ function HiddenVillages() {
                 </ul>
               </div>
             </div>
-            <div className="space-y-4 md:pt-16">
-              <motion.div initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="aspect-[3/4] overflow-hidden rounded-2xl">
-                <img src={gallery[0].src} alt="Village kitchen" className="h-full w-full object-cover" />
+            <div className="space-y-3">
+              <motion.div initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="aspect-[4/3] overflow-hidden rounded-2xl">
+                <img src={belkalVillage} alt="Belkal village roads" className="h-full w-full object-cover" />
               </motion.div>
-              {/* Stats as minimal text list */}
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-2">
                 {data.stats!.map((s, i) => (
-                  <div key={i} className="rounded-xl border border-[#0B192C]/10 bg-white p-4 text-center">
-                    <div className="text-xl font-black" style={{ color: C, fontFamily: "Fraunces, serif" }}>{s.number}</div>
+                  <div key={i} className="rounded-xl border border-[#0B192C]/10 bg-white p-3 text-center">
+                    <div className="text-lg font-black" style={{ color: C, fontFamily: "Fraunces, serif" }}>{s.number}</div>
                     <p className="mt-0.5 text-[10px] font-semibold text-[#0B192C]/55">{s.label}</p>
                   </div>
                 ))}

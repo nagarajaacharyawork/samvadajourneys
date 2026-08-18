@@ -12,10 +12,15 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as BookingPolicyRouteImport } from './routes/booking-policy'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CoupleRouteImport } from './routes/couple'
 import { Route as CustomTripsRouteImport } from './routes/custom-trips'
 import { Route as ExperiencesRouteImport } from './routes/experiences'
 import { Route as ExploreRouteImport } from './routes/explore'
+import { Route as FamilyRouteImport } from './routes/family'
+import { Route as FaqsRouteImport } from './routes/faqs'
+import { Route as SoloRouteImport } from './routes/solo'
 import { Route as TravelSafetyRouteImport } from './routes/travel-safety'
 import { Route as TripsRouteImport } from './routes/trips'
 import { Route as BlogIdRouteImport } from './routes/blog.$id'
@@ -39,9 +44,19 @@ const BlogRoute = BlogRouteImport.update({
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BookingPolicyRoute = BookingPolicyRouteImport.update({
+  id: '/booking-policy',
+  path: '/booking-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoupleRoute = CoupleRouteImport.update({
+  id: '/couple',
+  path: '/couple',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CustomTripsRoute = CustomTripsRouteImport.update({
@@ -57,6 +72,21 @@ const ExperiencesRoute = ExperiencesRouteImport.update({
 const ExploreRoute = ExploreRouteImport.update({
   id: '/explore',
   path: '/explore',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FamilyRoute = FamilyRouteImport.update({
+  id: '/family',
+  path: '/family',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqsRoute = FaqsRouteImport.update({
+  id: '/faqs',
+  path: '/faqs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SoloRoute = SoloRouteImport.update({
+  id: '/solo',
+  path: '/solo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TravelSafetyRoute = TravelSafetyRouteImport.update({
@@ -99,10 +129,15 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRouteWithChildren
+  '/booking-policy': typeof BookingPolicyRoute
   '/contact': typeof ContactRoute
+  '/couple': typeof CoupleRoute
   '/custom-trips': typeof CustomTripsRoute
   '/experiences': typeof ExperiencesRoute
   '/explore': typeof ExploreRouteWithChildren
+  '/family': typeof FamilyRoute
+  '/faqs': typeof FaqsRoute
+  '/solo': typeof SoloRoute
   '/travel-safety': typeof TravelSafetyRoute
   '/trips': typeof TripsRoute
   '/blog/$id': typeof BlogIdRoute
@@ -115,10 +150,15 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRouteWithChildren
+  '/booking-policy': typeof BookingPolicyRoute
   '/contact': typeof ContactRoute
+  '/couple': typeof CoupleRoute
   '/custom-trips': typeof CustomTripsRoute
   '/experiences': typeof ExperiencesRoute
   '/explore': typeof ExploreRouteWithChildren
+  '/family': typeof FamilyRoute
+  '/faqs': typeof FaqsRoute
+  '/solo': typeof SoloRoute
   '/travel-safety': typeof TravelSafetyRoute
   '/trips': typeof TripsRoute
   '/blog/$id': typeof BlogIdRoute
@@ -132,10 +172,15 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRouteWithChildren
+  '/booking-policy': typeof BookingPolicyRoute
   '/contact': typeof ContactRoute
+  '/couple': typeof CoupleRoute
   '/custom-trips': typeof CustomTripsRoute
   '/experiences': typeof ExperiencesRoute
   '/explore': typeof ExploreRouteWithChildren
+  '/family': typeof FamilyRoute
+  '/faqs': typeof FaqsRoute
+  '/solo': typeof SoloRoute
   '/travel-safety': typeof TravelSafetyRoute
   '/trips': typeof TripsRoute
   '/blog/$id': typeof BlogIdRoute
@@ -150,10 +195,15 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/blog'
+    | '/booking-policy'
     | '/contact'
+    | '/couple'
     | '/custom-trips'
     | '/experiences'
     | '/explore'
+    | '/family'
+    | '/faqs'
+    | '/solo'
     | '/travel-safety'
     | '/trips'
     | '/blog/$id'
@@ -166,10 +216,15 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/blog'
+    | '/booking-policy'
     | '/contact'
+    | '/couple'
     | '/custom-trips'
     | '/experiences'
     | '/explore'
+    | '/family'
+    | '/faqs'
+    | '/solo'
     | '/travel-safety'
     | '/trips'
     | '/blog/$id'
@@ -182,10 +237,15 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/blog'
+    | '/booking-policy'
     | '/contact'
+    | '/couple'
     | '/custom-trips'
     | '/experiences'
     | '/explore'
+    | '/family'
+    | '/faqs'
+    | '/solo'
     | '/travel-safety'
     | '/trips'
     | '/blog/$id'
@@ -199,10 +259,15 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRouteWithChildren
+  BookingPolicyRoute: typeof BookingPolicyRoute
   ContactRoute: typeof ContactRoute
+  CoupleRoute: typeof CoupleRoute
   CustomTripsRoute: typeof CustomTripsRoute
   ExperiencesRoute: typeof ExperiencesRoute
   ExploreRoute: typeof ExploreRouteWithChildren
+  FamilyRoute: typeof FamilyRoute
+  FaqsRoute: typeof FaqsRoute
+  SoloRoute: typeof SoloRoute
   TravelSafetyRoute: typeof TravelSafetyRoute
   TripsRoute: typeof TripsRoute
 }
@@ -230,11 +295,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/booking-policy': {
+      id: '/booking-policy'
+      path: '/booking-policy'
+      fullPath: '/booking-policy'
+      preLoaderRoute: typeof BookingPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/couple': {
+      id: '/couple'
+      path: '/couple'
+      fullPath: '/couple'
+      preLoaderRoute: typeof CoupleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/custom-trips': {
@@ -256,6 +335,27 @@ declare module '@tanstack/react-router' {
       path: '/explore'
       fullPath: '/explore'
       preLoaderRoute: typeof ExploreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/family': {
+      id: '/family'
+      path: '/family'
+      fullPath: '/family'
+      preLoaderRoute: typeof FamilyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faqs': {
+      id: '/faqs'
+      path: '/faqs'
+      fullPath: '/faqs'
+      preLoaderRoute: typeof FaqsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solo': {
+      id: '/solo'
+      path: '/solo'
+      fullPath: '/solo'
+      preLoaderRoute: typeof SoloRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/travel-safety': {
@@ -341,10 +441,15 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BlogRoute: BlogRouteWithChildren,
+  BookingPolicyRoute: BookingPolicyRoute,
   ContactRoute: ContactRoute,
+  CoupleRoute: CoupleRoute,
   CustomTripsRoute: CustomTripsRoute,
   ExperiencesRoute: ExperiencesRoute,
   ExploreRoute: ExploreRouteWithChildren,
+  FamilyRoute: FamilyRoute,
+  FaqsRoute: FaqsRoute,
+  SoloRoute: SoloRoute,
   TravelSafetyRoute: TravelSafetyRoute,
   TripsRoute: TripsRoute,
 }

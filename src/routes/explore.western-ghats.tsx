@@ -5,7 +5,7 @@ import { Link } from "@tanstack/react-router";
 import { C, OCEAN, PageCTA, PageFAQ, PageHero, SectionLabel, SectionTitle, type DestinationData } from "@/components/site/DestinationPage";
 import { ImageBannerWithQuote } from "@/components/site/DestinationPageEnhancements";
 import heroImg from "@/assets/imgi_9_673840a46b26f4521bcc7a7a_Kodachadri Hills 3.webp";
-import img1 from "@/assets/imgi_34_67456fb9ed1002405e16426a_DJI_0925-Enhanced-NR copy.webp";
+import img1 from "@/assets/Western Ghats.jpg";
 import img2 from "@/assets/imgi_48_67cd956958e2299374d3d90b_Nature-p-1080.webp";
 import wgQuote from "@/assets/westernghat-quote.jpg";
 import img3 from "@/assets/imgi_4_67cd949f03e3822d94252b8b_spri.webp";

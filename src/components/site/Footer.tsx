@@ -57,8 +57,8 @@ export function Footer() {
             {
               title: "Support",
               links: [
-                ["FAQs", "/explore/coastal-karnataka#faqs"],
-                ["Booking Policy", "/contact"],
+                ["FAQs", "/faqs"],
+                ["Booking Policy", "/booking-policy"],
                 ["Travel Safety", "/travel-safety"],
                 ["Custom Trips", "/custom-trips"],
                 ["Get in Touch", "/contact"],
