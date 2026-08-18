@@ -4,7 +4,7 @@ import { ArrowRight, Clock, Users } from "lucide-react";
 import expCoastal from "@/assets/imgi_13_675ffeed8edd871379a0092d_DJI_0519-Enhanced-NR copy.webp";
 import expHeritage from "@/assets/imgi_23_677215f313af8fcb3bd47c1b_Varanga Traditional Kambala 2024.webp";
 import expFood from "@/assets/imgi_22_677216968747c3a89492ff89_Moode Idli  kotte Kadubu.webp";
-import expWaterfall from "@/assets/exp-waterfall.jpg";
+import expWaterfall from "@/assets/Waterfalls trek.jpeg";
 import expSunrise from "@/assets/imgi_4_67cd949f03e3822d94252b8b_spri.webp";
 import expCoffee from "@/assets/Coffee.webp";
 import expCorporate from "@/assets/gallery-people.jpg";

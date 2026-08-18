@@ -1,7 +1,7 @@
 import expCoastal from "@/assets/CoastalExplorer.webp";
 import expHeritage from "@/assets/Krishna Matha Heritage Walk.webp";
 import expFood from "@/assets/cuisine.jpg";
-import expWaterfall from "@/assets/Kudlu Falls Monsoon Trek.webp";
+import expWaterfall from "@/assets/Waterfalls trek.jpeg";
 import expSunrise from "@/assets/Kaup Sunrise and Lighthouse Morning.webp";
 import expCoffee from "@/assets/Coffee.webp";
 import tripMalpe from "@/assets/Malpe Coastal Weekender.webp";

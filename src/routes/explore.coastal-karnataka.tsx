@@ -6,10 +6,11 @@ import { C, OCEAN, PageCTA, PageFAQ, PageHero, SectionLabel, SectionTitle, type 
 import { ImageBannerWithQuote } from "@/components/site/DestinationPageEnhancements";
 import heroImg from "@/assets/Coastal Karnataka.jpg";
 import imgMalpe from "@/assets/Malpe harbour.jpg";
+import imgFishing from "@/assets/fishing economy.jpeg";
 import imgStMarys from "@/assets/St. Mary's Island.jpg";
 import imgKaup from "@/assets/Kaup Lighthouse.jpg";
 import imgDelta from "@/assets/Delta Point.jpg";
-import imgBackwaters from "@/assets/Udupi Backwaters.jpg";
+import imgBackwaters from "@/assets/backwaters.jpeg";
 import imgTemples from "@/assets/Coastal Temples.jpg";
 import imgMangaluru from "@/assets/Mangaluru.jpg";
 import imgCuisine from "@/assets/cuisine.jpg";
@@ -134,11 +135,11 @@ function CoastalKarnataka() {
   const gallery = data.gallery;
 
   const beachStops = [
-    { image: imgMalpe, name: "Malpe Harbour", tagline: "The auction starts before the sun does.", badge: "Dawn" },
+    { image: imgFishing, name: "Fishing Economy", tagline: "The auction starts before the sun does.", badge: "Dawn" },
     { image: imgStMarys, name: "St. Mary's Island", tagline: "88 million years of geology in one boat ride.", badge: "Geological Wonder" },
     { image: imgKaup, name: "Kaup Lighthouse", tagline: "Built 1901. Still the best sunset seat on the coast.", badge: "Landmark" },
     { image: imgDelta, name: "Delta Point", tagline: "Where the river gives itself to the sea.", badge: "Hidden Gem" },
-    { image: imgBackwaters, name: "Udupi Backwaters", tagline: "Mangroves, kingfishers, and no agenda.", badge: "Slow Travel" },
+    { image: imgBackwaters, name: "Backwaters & Temples", tagline: "Mangroves, kingfishers, and sacred shores.", badge: "Slow Travel" },
     { image: imgTemples, name: "Coastal Temples", tagline: "Sacred sites woven into the daily life of the coast.", badge: "Sacred" },
   ];
 
@@ -167,7 +168,7 @@ function CoastalKarnataka() {
           {/* Para 1 — image left */}
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <motion.div initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="aspect-[4/5] overflow-hidden rounded-2xl">
-              <img src={imgMalpe} alt="Malpe harbour" className="h-full w-full object-cover" />
+              <img src={imgFishing} alt="Fishing economy at Malpe harbour" className="h-full w-full object-cover" />
             </motion.div>
             <div>
               <SectionLabel text="The Coast" />

@@ -40,11 +40,11 @@ function ContactPage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1fr_1.3fr] md:px-8">
           <div className="space-y-4">
             {[
-              { icon: Phone, title: "Call Us", value: "+91 98450 12345", href: "tel:+919845012345" },
-              { icon: MessageCircle, title: "WhatsApp", value: "Chat with a host", href: "https://wa.me/919845012345" },
-              { icon: Mail, title: "Email", value: "hello@samvadajourneys.in", href: "mailto:hello@samvadajourneys.in" },
-              { icon: MapPin, title: "Office", value: "Diana Circle, Udupi, Karnataka 576101" },
-              { icon: Instagram, title: "Instagram", value: "@samvadajourneys", href: "https://www.instagram.com/samvadajourneys" },
+              { icon: Phone, title: "Call Us", value: "+91 761 939 4676", href: "tel:+917619394676" },
+              { icon: MessageCircle, title: "WhatsApp", value: "Chat with a host", href: "https://wa.me/917619394676" },
+              { icon: Mail, title: "Email", value: "samvadajourneys@gmail.com", href: "mailto:samvadajourneys@gmail.com" },
+              { icon: MapPin, title: "Office", value: "Samvada Journeys, S S Complex, Saibrakatte, Shiriyara Village, 576210, Karnataka" },
+              { icon: Instagram, title: "Instagram", value: "@SamvadaJourneys", href: "https://www.instagram.com/samvadajourneys/" },
             ].map((c) => {
               const inner = (
                 <div className="flex items-start gap-4 rounded-3xl border border-foreground/10 bg-card p-6 transition-colors hover:border-foreground/25">

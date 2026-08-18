@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
-const WHATSAPP_URL = "https://wa.me/919845012345?text=Hi%2C%20I%27d%20like%20to%20plan%20a%20journey%20with%20Samvada%20Journeys";
+const WHATSAPP_URL = "https://wa.me/917619394676?text=Hi%2C%20I%27d%20like%20to%20plan%20a%20journey%20with%20Samvada%20Journeys";
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -14,14 +14,14 @@ const localBusinessSchema = {
   url: "https://www.samvadajourneys.in",
   logo: "https://www.samvadajourneys.in/samvada-logo-mark.png",
   image: "https://www.samvadajourneys.in/samvada-logo-mark.png",
-  telephone: "+91-98450-12345",
-  email: "hello@samvadajourneys.in",
+  telephone: "+91-761-939-4676",
+  email: "samvadajourneys@gmail.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Diana Circle",
-    addressLocality: "Udupi",
+    streetAddress: "S S Complex, Saibrakatte, Shiriyara Village",
+    addressLocality: "Saibrakatte",
     addressRegion: "Karnataka",
-    postalCode: "576101",
+    postalCode: "576210",
     addressCountry: "IN",
   },
   geo: {
@@ -36,7 +36,7 @@ const localBusinessSchema = {
     { "@type": "City", name: "Chikmagalur" },
   ],
   sameAs: [
-    "https://www.instagram.com/samvadajourneys",
+    "https://www.instagram.com/samvadajourneys/",
     "https://www.facebook.com/samvadajourneys",
     "https://twitter.com/SamvadaJourneys",
     "https://www.linkedin.com/company/samvadajourneys",

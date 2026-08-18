@@ -19,8 +19,8 @@ export function Footer() {
             </p>
             <div className="mt-6 flex items-center gap-3">
               {[
-                { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/samvadajourneys" },
-                { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/919845012345" },
+                { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/samvadajourneys/" },
+                { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/917619394676" },
                 { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/samvadajourneys" },
                 { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@samvadajourneys" },
                 { icon: Twitter, label: "Twitter / X", href: "https://twitter.com/SamvadaJourneys" },
