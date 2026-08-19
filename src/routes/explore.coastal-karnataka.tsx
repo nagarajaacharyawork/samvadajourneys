@@ -192,7 +192,7 @@ function CoastalKarnataka() {
               <p className="mt-6 text-base leading-relaxed text-[#0B192C]/75">{data.about[1]}</p>
             </div>
             <motion.div initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="aspect-[4/5] overflow-hidden rounded-2xl md:order-2 order-1">
-              <img src={imgMangaluru} alt="Mangaluru coastal life" className="h-full w-full object-cover" />
+              <img src={imgBackwaters} alt="Udupi backwaters" className="h-full w-full object-cover" />
             </motion.div>
           </div>
         </div>
